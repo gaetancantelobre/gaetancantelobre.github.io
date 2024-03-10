@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="mystyle.css">
 
 <head>
     <title>Welcome to Gaetan Cantelobre's Page</title>
 </head>
 
 <body>
-    <h1>Hi, I'm Gaetan Cantelobre</h1>
-    <p>Welcome to my page!</p>
+    <h1>Gaetan Cantelobre Coputer Science Master Student</h1>
+    <p>This page is here to showoff what project i partake in, including passion projets and school projects</p>
+    <div>
+        <p> Contact info </p>
+        <ul>
+            <li>Bordeaux, France</li>
+            <li>Computer Science master student at the Université de Bordeaux</li>
+            <li>Email : gaetancantelobre(at)gmail(dot)com</li>
+        </ul>
+    </div>
+
+
+    <div class="rectangle">
+        <div class="text-block">
+            <h2>QMK MacroPad</h2>
+            <p>Multilayer macropad using QMK firmware and AutoHotKey script easily open webpages, applications and
+                manage active media. Boosting a full custom pcb, 9 assignable buttons, close to limitless amount of
+                layers to increase the number of available binds.
+                For better feedback on the current binds and layer of the macropad a 128 x 32 pixel I2C OLED screen is
+                situated at the top, indicating the current setup and changing at each level change.
+                For the brains (micro controller) i use the classic Arduino Pro Micro for its high GPIO count and small
+                footprint.
+                PCB was desgined in KiCad and produced with JLBPCB.
+            </p>
+        </div>
+        <div class="photo-block">
+            <img src="images/built_macropad.jpg" alt="Photo">
+            <img src="images/pcb_macropad.jpg" alt="Photo">
+            <img src="images/macro_pad_kicad.png" alt="Photo">
+
+
+        </div>
+    </div>
+
+    <div class="rectangle">
+        <div class="text-block">
+            <h2>Tilt Indicator</h2>
+            <p> Arduino Nano based tilt indicator using a MPU6050 3-axis accelerometer and 3-axis gyroscope. Made for
+                competive shooters and airsoft use.
+                The precision can be set in software as well as the mounting offset for the most precise experience. The
+                first iteraction on a breadboard used a OLED screen but htrough the feedback of the shooters, they
+                wanted something that they could read in the peripheral vision.
+                The current version uses 5 leds to indicate the direction and amplitude of the tilt. The base setting is
+                precise to 3 degrees but can be cranked down to less.
+                It can be power through a 2s lipo battery or by usb.
+                Designed in KiCad and produced with JLBPCB.
+                For mounting I've designed a variety of mounts, from flat mounts to picatinny rail mounts </p>
+        </div>
+        <div class="photo-block">
+            <img src="images/tilt_sensor_kicad.png" alt="Photo">
+            <img src="images/3_tilt_sensor.jpg" alt="Photo">
+            <img src="images/tilt_sensor_pica.png" alt="Photo">
+        </div>
+    </div>
+
+
+    <div class="rectangle">
+        <div class="text-block">
+            <h2>Airsoft Defusing Game</h2>
+            <p>
+                Arduino Nano based airsoft scenario prop, where user choses a order in which wires have to be removed or
+                the bomb will go "off" (its a toy not a weapon). Powered by usb or 2s LiPo.
+                More information on my <a href="https://github.com/gaetancantelobre/airsoft-bomb-prop">github repo </a>!
+
+            </p>
+        </div>
+        <div class="photo-block">
+            <img src="images/airoft_pcb_bare.jpg" alt="Photo">
+            <img src="images/airsoft_assembled.jpg" alt="Photo">
+        </div>
+    </div>
+
+
 </body>
 
 </html>
