@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Fun Projects</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hey ! I'm Gaetan.</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rc_page.html">RC and FPV projects.</a></li>
+            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
+        </ul>
+
+        <h2>Project list :</h2>
+        <ul>
+            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
+            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
+            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
+            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
+            <li><a href="legacy.html">Tilt Indicator</a></li>
+            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+        </ul>
+
+        <h2>RC/FPV Project list :</h2>
+        <ul>
+            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
+            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
+            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
+            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="project-details-page" id="simon">
+            <h1>For fun projects.</h1>
+            
+            <p>
+             This page is dedicated to all of my fun projects.
+             These projects aren't the most impressive but things I wanted to make to have some fun or explore new tech!
+             </p>
+             <div>
+             <h2>Simon clone keychain</h2>
+             <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+             <p>
+             A <b>spooky</b> clone of the Simon game in the <b>41mm keychain</b> form factor running on a <b>rp2040</b>.<br>
+             </p>
+            <div class="photo-gallery">
+             <img src="images/simon/whole.JPG" alt="Photo">
+             <img src="images/simon/assembly.gif" alt="Photo">
+             <video width="320" height="240" controls>
+            <source src="images/simon/demo.mp4" type="video/mp4">
+            </video>
+            
+           </div>
+            <p>
+             I had some nostalgic thoughts about some childhood games I had and one of them was the Simon color game. It would give you a forever growing <b>sequence of colors</b>,<br>
+             and you had to <b>restore them in the correct order</b>. There was no winning or losing just who would get the highest score.
+             The project was a bit simple in justifying ordering PCBs and making a full product. So I challenged myself to <b>make it as small as possible</b> (with a pre-built microcontroller).
+             This was the perfect opportunity to test out SMD soldering. Components that are soldered to the surface of the PCB and not through a hole in the board. This generally makes for a small footprint.<br>
+             A good example of this is the LEDs I'm using. The classic LED is 5mm wide and 7mm tall, and the SMD version is a 1206 standard LED with <b>3.20mm x 1.60mm</b>.<br>
+             Easy to say that when you drop them because you will, they are gone forever finding them on the floor is a painstaking experience.
+             </p>
+             <div class="photo-gallery">
+             <img src="images/simon/size.JPG" alt="Photo">
+             
+           </div>
+             <p>
+             Since the components are quite small it's not an easy task to solder them with a soldering iron as the pads are very small.
+             To accommodate such small surface areas, instead of trying to heat a small portion of the board, we use a <b>reflow plate / preheating plate</b> to heat the whole PCB to a "lower" temperature.<br>
+             Using a lower melting point solder paste <b>(130 C)</b> we can heat the whole board and preplace the parts and the solder paste and just watch as the solder melts and adheres to the pads and components.
+             It's not as simple as just melting and cooling down the solder. A specific <b>heat curve</b> must be used to ensure the correct bonding of the solder.<br>
+             First, the flux must be melted and given time to spread on the pads, same for the solder, wait for the heat to disperse to avoid cold joints.<br>
+             
+            <a href="https://www.pcbelec.com/reflow-soldering-temperature-curve.html#:~:text=This%20is%20the%20current%20best,than%204%C2%B0C%2Fsec."> More about heat curves </a>.
+            </p>
+             <div class="photo-gallery">
+            <img src="images/simon/reflow.JPG" alt="Photo">
+             <img src="images/simon/reflow1.JPG" alt="Photo">
+             </div>
+            
+            <p>
+             A project is never done without some 3D printing and PCB design (which I've already covered). Not all the components are SMD, so there are some point bits on the backside.
+             That is why I decided to make a quick 3D-printed case so it wouldn't snag on my pockets.
+            </p>
+            <div class="photo-gallery">
+             <img src="images/simon/pcb_gif.gif" alt="Photo">
+             <img src="images/simon/cad.png" alt="Photo">
+             <img src="images/simon/kicad.png" alt="Photo">
+            
+             </div>
+             
+            <p> Overall such a fun little conversation starter.<br> I may remake one using an esp32, as we could imagine having a local MQTT server running to receive the scores of each game. To have the high score stored somewhere.</p>
+        
+            <p>
+             Code, .step files, and .gerbers on my <a
+            href="https://github.com/gaetancantelobre/color_repeter">github repo </a>!
+             </p>
+            
+            </div>
+
+
+            <a href="index.html">Back to Projects</a>
+        </div>
+    </div>
+</body>
+</html>

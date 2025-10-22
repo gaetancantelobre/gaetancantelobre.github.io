@@ -1,88 +1,167 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="mystyle.css">
-
 <head>
-    <title>Welcome to Gaetan Cantelobre's Page</title>
+    <title>Gaetan's portfolio</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
-
 <body>
-    <h1>Gaetan Cantelobre Computer Science Master Student</h1>
-    <p>This page is here to showoff what project i partake in, including passion projets and school projects</p>
-    <div>
-        <p> Contact info </p>
+    <main>
+    <div class="sidebar">
+        <h2>Hey ! I'm Gaetan.</h2>
         <ul>
-            <li>Bordeaux, France</li>
-            <li>Computer Science master student at the Université de Bordeaux M2 ASPIC </li>
-            <li>Email : gaetancantelobre(at)gmail(dot)com</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rc_page.html">RC and FPV projects.</a></li>
+            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
         </ul>
+
+        <h2>Project list :</h2>
+        <ul>
+            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
+            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
+            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
+            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
+            <li><a href="legacy.html">Tilt Indicator</a></li>
+            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+        </ul>
+
+        <h2>RC/FPV Project list :</h2>
+        <ul>
+            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
+            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
+            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
+            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+        </ul>
+
     </div>
-
-
-    <div class="rectangle">
-        <div class="text-block">
-            <h2>QMK MacroPad</h2>
-            <p>Multilayer macropad using QMK firmware and AutoHotKey script easily open webpages, applications and
-                manage active media. Boosting a full custom pcb, 9 assignable buttons, close to limitless amount of
-                layers to increase the number of available binds.
-                For better feedback on the current binds and layer of the macropad a 128 x 32 pixel I2C OLED screen is
-                situated at the top, indicating the current setup and changing at each level change.
-                For the brains (micro controller) i use the classic Arduino Pro Micro for its high GPIO count and small
-                footprint.
-                PCB was desgined in KiCad and produced with JLBPCB.
-            </p>
+        <div class="aboutme">
+            <h1>Gaetan Cantelobre</h1>
+            <h2>Computer Science Master Student @ Université de Bordeaux</h2>
+            <h3> Autonomous Systems, Embedded Systems, Drones & Robotics</h3>
         </div>
-        <div class="photo-block">
-            <img src="images/built_macropad.jpg" alt="Photo">
-            <img src="images/pcb_macropad.jpg" alt="Photo">
-            <img src="images/macro_pad_kicad.png" alt="Photo">
+        
+        
+        <h1>RC Project List</h1>
+        <ul class="project-list">
+            <li>
+                <div class="project-div">
+                    <img src="images/b2/plane_duo.JPG" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>1 hour flight time under 100 grams ? Delta-wing build.</h2>
+                        <p>A 40cm wingspan delta-wing able to fly for over an hour at a total weight of +- 93 grams.</p>
+                        <a href="B2_60_100.html">Go see the full article</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/quads/noopy/side_noopy.jpg" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>Noopy - 64g analog 3-inch 2S quad.</h2>
+                        <p>My custom built 3-inch freestyle quad !</p>
+                        <a href="rc_page.html">RC/FPV Page</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/b2/plane_flight.gif" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>B2 MINI's - a duo of 40cm delta-wing builds.</h2>
+                        <p>2 delta-wings with same frame but with very different goals!</p>
+                        <a href="rc_page.html">RC/FPV Page</a>
+                </div>
+            </li>
+        </ul>
+        
+        
+        <h1>CS Project List</h1>
+        <ul class="project-list">
 
+            <li>
+                <div class="project-div">
+                    <img src="images/simon/whole.JPG" alt="Project Thumbnail" height=200px width=auto>
 
-        </div>
-    </div>
+                    <div class="project-details" id="simon">
+                        <h2>SIMON™ clone keychain</h2>
+                        <p>A <b>spooky</b> clone of the Simon game in the <b>41mm keychain</b> form factor running on a <b>rp2040</b>.</p>
+                        <h4> Skills :<b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+                        <a href="forfun.html#simon">Learn more !<br></a>
+                        
+                </div>
+            </li>
 
-    <div class="rectangle">
-        <div class="text-block">
-            <h2>Tilt Indicator</h2>
-            <p> Arduino Nano based tilt indicator using a MPU6050 3-axis accelerometer and 3-axis gyroscope. Made for
-                competive shooters and airsoft use.
-                The precision can be set in software as well as the mounting offset for the most precise experience. The
-                first iteraction on a breadboard used a OLED screen but htrough the feedback of the shooters, they
-                wanted something that they could read in the peripheral vision.
-                The current version uses 5 leds to indicate the direction and amplitude of the tilt. The base setting is
-                precise to 3 degrees but can be cranked down to less.
-                It can be power through a 2s lipo battery or by usb.
-                Designed in KiCad and produced with JLBPCB.
-                For mounting I've designed a variety of mounts, from flat mounts to picatinny rail mounts </p>
+            <li>
+                <div class="project-div">
+                    <img src="images/space_mouse/full.JPG" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>3 DOF Space Mouse for CAD</h2>
+                        <p>Custom made <b>3 DOF</b> Space mouse, 2 versions : magnetometer based and joystick based.</p>
+                        <h4> Skills : <b>CAD</b>, <b>Embedded systems</b>,<b>Signal Analysis</b></h4>
+                        <a href="hid_devices.html#spacemouse">HID Device Page</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/built_macropad.jpg" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>QMK MacroPad</h2>
+                        <p>Custom made macropad, from software to pcb desgined with <b>KiCad</b> and based on a <b>ATMEGA32U4</b>.</p>
+                        <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+                        <a href="hid_devices.html#MacroPad">HID Device Page</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/ssl/demo.gif" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>RoboCup SSL Blackout Challenge (university project).</h2>
+                        <p>Me and 2 other class mate's attempt at the RoboCup's SSL Blackout challenge!</p>
+                        <h4> Skills : <b>AI</b>, <b>Computer vision</b>, <b>Pathfinding</b>,<b>Decision making</b></h4>
+                        <a href="computer_vision.html#rbc">Computer Vision Project Page</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/tarkov/inventory.png" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>EFT market management and selling bot.</h2>
+                        <p>A OpenCV and PyAutoGUI based inventory bot.</p>
+                        <h4> Skills : <b>Computer vision</b>, <b>OPENCV</b>, <b>Automation</b> </h4>
+                        <a href="computer_vision.html#eft">Computer Vision Project Page</a>
+                </div>
+            </li>
+            <li>
+                <div class="project-div">
+                    <img src="images/kb/kb_pcb.jpg" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>TWIM IMPULSE - fully custom keyboard from PCB to software.</h2>
+                        <p>Fully custom 60% keyboard, software and pcb made with KiCad</p>
+                        <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+                        <a href="hid_devices.html#kb">HID Device Page</a>
+                </div>
+            </li>
 
-            More information on my <a href="https://github.com/gaetancantelobre/arduino_precision_tilt_sensor">github
-                repo </a>!
-        </div>
-        <div class="photo-block">
-            <img src="images/tilt_sensor_kicad.png" alt="Photo">
-            <img src="images/3_tilt_sensor.jpg" alt="Photo">
-            <img src="images/sensor_gig.gif" alt="Photo">
-        </div>
-    </div>
+            <li>
+                <div class="project-div">
+                    <img src="images/sensor_gig.gif" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>Tilt Indicator</h2>
+                        <p> LED level based on a MPU6050 and a Arduino Nano made for competitive shooting.</p>
+                        <a href="legacy.html">Legacy projects</a>
+                </div>
+            </li>
 
-
-    <div class="rectangle">
-        <div class="text-block">
-            <h2>Airsoft Defusing Game</h2>
-            <p>
-                Arduino Nano based airsoft scenario prop, where user choses a order in which wires have to be removed or
-                the bomb will go "off" (its a toy not a weapon). Powered by usb or 2s LiPo.
-                More information on my <a href="https://github.com/gaetancantelobre/airsoft-bomb-prop">github repo </a>!
-
-            </p>
-        </div>
-        <div class="photo-block">
-            <img src="images/airoft_pcb_bare.jpg" alt="Photo">
-            <img src="images/airsoft_assembled.jpg" alt="Photo">
-        </div>
-    </div>
-
-
+            <li>
+                <div class="project-div">
+                    <img src="images/airsoft_assembled.jpg" alt="Project Thumbnail" height=200px width=auto>
+                    <div class="project-details">
+                        <h2>Airsoft Defusing Game</h2>
+                        <p>Arduino Nano-based airsoft scenario prop. My first custom PCB.</p>
+                        <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Electronics</b></h4>
+                        <a href="legacy.html">Legacy Projects Page</a>
+                </div>
+            </li>
+            </ul>
+    </main>
 </body>
-
 </html>

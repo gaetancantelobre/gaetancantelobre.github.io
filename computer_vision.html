@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RC STUFF!</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hey ! I'm Gaetan.</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rc_page.html">RC and FPV projects.</a></li>
+            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
+        </ul>
+
+        <h2>Project list :</h2>
+        <ul>
+            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
+            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
+            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
+            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
+            <li><a href="legacy.html">Tilt Indicator</a></li>
+            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+        </ul>
+
+        <h2>RC/FPV Project list :</h2>
+        <ul>
+            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
+            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
+            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
+            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="project-details-page">
+            <h1>Computer vision projects.</h1>
+            <p>
+                This page is dedicated to all of my computer vision related projects !
+                
+            </p>
+            <div id="rbc">
+            <h2>RoboCup SSL Blackout Challenge (university project)</h2>
+            
+                <h4> Skills : <b>AI</b>, <b>Computer vision</b>, <b>Pathfinding</b>, ,<b>Decision making</b></h4>
+            <h3>Challenge description and context.</h3>
+
+            <p>
+                During the first year of my master's me and 2 other had to choose a programming challenge and complete it while simulating how a company works : meetings, objectives releases etc.
+                We choose a challenge offered by Patrick Felix a teacher at IUT de Bordeaux. His challenge was an attempt at the RoboCup SSL Blackout Challenge
+                 (<a href="https://robocup-ssl.github.io/technical-challenge-rules/2022-ssl-vision-blackout-rules.pdf">Full description</a>).
+                TLDR : We have wheel powered robots playing a simplified version of soccer. Normaly an overhead camera identifies the robot and the ball and controls them accordingly.
+                In our challenge these robots have to be 100% independant.<br>
+                There was different level of challenges :
+                <ul>
+                    <li>Find and recognize objects on the field (robots,ball,goals). <b>COMPLETED</b></li>
+                    <li>Find , move to, and kick the ball. <b>COMPLETED</b></li>
+                    <li>Find ball, and score a goal. <b>COMPLETED</b></li>
+                    <li> Score a goal by passing the ball to an ally. <b>UNCOMPLETED</b></li>
+                </ul>    
+                We were constrainted to use a Nvidia Jetson Nano as part of the challenge.
+                
+            </p>
+
+            <h3>How the challenge was completed.</h3>
+
+
+            <p>
+                The challenges were completed using a webcam strapped to the robot, a custom YOLOV8 model that we trained on elements of the "soccer field".
+                Using our YOLOV8 model we were able to identify objects and there size allowing to make a simple search and meet algorithm.
+                Knowing the size of objects in pixels at a certain distance allows us to estimate their size at all pixel size allowing to adjust for shot power and approach speed.
+                Some notable challenges were object permenance as well as the control of the robot through the <a href="https://robot-soccer-kit.com/">RSK</a> API.
+            </p>
+            <br>
+            <p>
+                To see source code, an article on our work and a video demo, check out our <a href="https://github.com/gaetancantelobre/VisionBlackOutM1">github</a> .
+            </p>
+
+            <div class="photo-gallery">
+                <img src="images/ssl/demo.gif" alt="Photo" max-width=450px max-height=450px>
+                <img src="images/ssl/robot_vision.png" alt="Photo" max-width=450px max-height=450px>
+            </div>
+            </div>
+
+            <div id="eft">
+                <h2>EFT market management and selling bot using Computer Vision with OpenCV and PyAutoGUI.</h2>
+            
+                <h4> Skills : <b>Computer vision</b>, <b>OPENCV</b>, <b>Automation</b> </h4>
+            <h3>A need for Automation</h3>
+
+
+            <p>     Escape from Tarkov is a video game on which I spent a lot of time, especially during the pandemic.
+                One of the multiple complicated mechanics is the player-based economy. <br>
+                Including a market on which players can sell items at a price according to supply and demand.
+                Each player has a limited amount of market slots (the number of items you can put up for sale at a
+                time). <br>
+            
+                Currently, there are 1634 items (not counting the slight variations in colors, etc) which means selling all the items you find can be very time-consuming. <br>
+                So it took on me to create a bot that can navigate menus, identify sellable objects in the stash
+                (inventory), and goes through the whole procedure of selling the item at the best price and as fast as
+                possible.<br>
+            </p>
+
+            <h3>TLDR !</h3>
+            <p>
+                A bot that opens a loot box, scans and notes all the items in the box that it wants to sell, identifies
+                and navigates through menus using OpenCV computer vision, And
+                PyAutoGUI. Reads the lowest current price with OpenCV on a post-treated screenshot, undercuts the price
+                puts it up for sale, waits for it to be sold, rinse and repeat.
+            </p>
+
+
+            <h3>The challenges !</h4>
+                <p>
+                    There are quite a few challenges presented going into this project.
+                <ul>
+                    <li>No API, so moving windows and navigating through menus has to be done by simulating keystrokes
+                        and
+                        mouse movement (PyAutoGUI).</li>
+                    <li>To navigate through menus and find items we need to be able to determine which menu we are in,
+                        and
+                        when to look for menus and items. (OpenCV)</li>
+                    <li>To sell the items at the right price we need to read the numbers on the screen. (OpenCV)</li>
+                </ul>
+                </p>
+                <h4>Automation of keystrokes and mouse movements.</h4>
+
+                <p>
+                    To answer the first problem I used <a                        
+                        href="https://pyautogui.readthedocs.io/en/latest/">PyAutoGUI</a> a python library that can
+                    simulate
+                    keyboard inputs and mouse movement, like a HID device.
+                    Using this we can move windows, click, double-click, and set randomness to the bot movement to avoid
+                    detection from the game engine.
+                    From an outside point of view, it looks like the mouse is moving on its own.
+                </p>
+
+                <h4>Indentification of menues and items.</h4>
+
+                <p>
+                    The bot needs an organized inventory to aid its functions. Instead of relying on OPENCV's ability to
+                    read text on an image we can use what is always the same. <br>
+                    We demand that the user place the box with the sellable items always in the same place.<br>
+                     This is a less adaptable system but at the same time analyzing a large portion of the screen is demanding in time and
+                    the whole point of this bot is to be faster than a human. <br>
+                </p>
+                <p>
+                    Tarkov is a very variable game, opening containers will always open the same sub-inventory but not
+                    always
+                    in the same space on the screen. But once again we rely on regular things in this case all
+                    junk cases
+                    windows have a recognizable corner.<br>
+                    So we use OPENCV to find that window in the portion of the screen. We portion out part of the screen
+                    as
+                    the sub-inventory is quite large so the window bar can only be on the upper end of the screen.<br>
+                    Knowing the position of the sub-inventory we can move it by "dragging" it using PyAutoGUI.<br>
+                    This is the basis for 90% of the navigation of the bot. For checking status like: "Do we have a
+                    slot on
+                    the market left",
+                    "am I in the right game state (menu)", etc. We compare pixel color with static pixels which
+                    correspond to different game states.<br>
+                </p>
+                <p>
+                    For the old version (which is more interesting for computer vision), each item we'd want to sell has
+                    a "found in raid" icon on it, OpenCV identifies them, makes a list
+                    of their X, and Y positions on the screen.<br>
+                    When the window is at the chosen position the bot clicks on it and sells them through a couple of
+                    keybinds. It is important to note that you can sell multiple of the same item at the same time
+                    taking only one slot.<br>
+                    For the current version which is faster, we just use an offset from the top of the inventory window
+                    because the items are set on a grid. (See examples).<br>
+                    The game has an auto-select "similar items" which is a lifesaver for time. To avoid clicking on
+                    empty slots,
+                    to make sure that the pixel on the next position is not the same color as the background.<br>
+                </p>
+                <p>
+                    I won't explain any more on how navigation works as it is quite repetitive, if you want to take a
+                    look at the source code check out <a href="https://github.com/gaetancantelobre/TARKOV_sell_bot">my
+                        git repo for this project</a>. <br>
+
+                    Examples of inventories and visual markers used to navigate and mark items:<br>
+                
+                    <div class="photo-gallery">
+                        <img src="images/tarkov/junk.png" alt="Photo">
+                        <img src="images/tarkov/inventory.png" alt="Photo">
+                        
+                    </div>
+
+                </p>
+
+                <h4>Preprocessing of images for computer vision</h4>
+
+                <p>
+                    Reading prices was a difficult challenge in itself as I had to learn how to correctly modify
+                    an image to get the best and most repeatable results.
+                    The background around the price is not static. In the menu the leaves of a tree move in the
+                    wind making it hard to get consistent reading on prices.
+                    To avoid that filter only certain RGB values corresponding to the colors of the numbers giving us a
+                    grayscale image of only the price which is much easier to read.
+                    A couple of characters in the font resemble other characters like: "S" resembles "5", and "@"
+                    resembles "0" so we filter and convert.
+                    In the case where it can not be read, the bot stops to avoid selling items at poor prices.<br>
+                    <img src="images/tarkov/treatement.png" alt="Photo">
+
+
+                </p>
+
+
+                <h4>NOTA BENE </h4>
+                <p>
+                    This bot was created for the 13.0 verison of EFT. I stop maintaining this bot after recieving a ban
+                    warning from the game admins as using bots is against the game rules.
+                    Use and modify at your own risk.
+                </p>
+
+
+         
+            </div>
+        
+
+    </div>
+</body>
+</html>

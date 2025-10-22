@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="mystyle.css">
+
+<head>
+    <title>Gaetan's portfolio</title>
+</head>
+<body>
+
+    <div class="rectangle"></div>
+        <div class="text-block">
+            <h2>RoboCup SSL Blackout Challenge (university project)</h2>
+            <h4> Skills : <b>AI</b>, <b>Computer vision</b>, <b>Pathfinding</b>, ,<b>Decision making</b></h4>
+            <h3>Challenge description and context.</h3>
+
+            <p>
+                During the first year of my master's me and 2 other had to choose a programming challenge and complete it while simulating how a company works : meetings, objectives releases etc.
+                We choose a challenge offered by Patrick Felix a teacher at IUT de Bordeaux. His challenge was an attempt at the RoboCup SSL Blackout Challenge
+                 (<a href="https://robocup-ssl.github.io/technical-challenge-rules/2022-ssl-vision-blackout-rules.pdf">Full description</a>).
+                TLDR : We have wheel powered robots playing a simplified version of soccer. Normaly an overhead camera identifies the robot and the ball and controls them accordingly.
+                In our challenge these robots have to be 100% independant.<br>
+                There was different level of challenges :
+                <ul>
+                    <li>Find and recognize objects on the field (robots,ball,goals). <b>COMPLETED</b></li>
+                    <li>Find , move to, and kick the ball. <b>COMPLETED</b></li>
+                    <li>Find ball, and score a goal. <b>COMPLETED</b></li>
+                    <li> Score a goal by passing the ball to an ally. <b>UNCOMPLETED</b></li>
+                </ul>    
+                We were constrainted to use a Nvidia Jetson Nano as part of the challenge.
+                
+            </p>
+
+            <h3>How the challenge was completed.</h3>
+
+
+            <p>
+                The challenges were completed using a webcam strapped to the robot, a custom YOLOV8 model that we trained on elements of the "soccer field".
+                Using our YOLOV8 model we were able to identify objects and there size allowing to make a simple search and meet algorithm.
+                Knowing the size of objects in pixels at a certain distance allows us to estimate their size at all pixel size allowing to adjust for shot power and approach speed.
+                Some notable challenges were object permenance as well as the control of the robot through the <a href="https://robot-soccer-kit.com/">RSK</a> API.
+            </p>
+            <br>
+            <p>
+                To see source code, an article on our work and a video demo, check out our <a href="https://github.com/gaetancantelobre/VisionBlackOutM1">github</a> .
+            </p>
+        </div>
+        <div class="photo-block">
+            <img src="images/ssl/demo.gif" alt="Photo">
+            <img src="images/ssl/robot_vision.png   " alt="Photo">
+        </div>
+    </div>
+
+</body>
+
+
+
+<div class="rectangle"></div>
+        <div class="text-block">
+            <h2>RoboCup SSL Blackout Challenge (university project)</h2>
+
+            <p>
+                During the first year of my master's me and 2 other had to choose a programming challenge and complete it while simulating how a company works : meetings, objectives releases etc.
+                We choose a challenge offered by Patrick Felix a teacher at IUT de Bordeaux. His challenge was an attempt at the RoboCup SSL Blackout Challenge
+                 (<a href="https://robocup-ssl.github.io/technical-challenge-rules/2022-ssl-vision-blackout-rules.pdf">Full description</a>).
+                TLDR : We have wheel powered robots playing a simplified version of soccer. Normaly an overhead camera identifies the robot and the ball and controls them accordingly.
+                In our challenge these robots have to be 100% independant.<br>
+                There was different level of challenges associated
+                We were constrainted to use a Nvidia Jetson Nano as part of the challenge.
+                
+            </p>
+
+
+            <p>
+                The challe
+            </p>
+        </div>
+        <div class="photo-block">
+            <img src="images/built_macropad.jpg" alt="Photo">
+            <img src="images/pcb_macropad.jpg" alt="Photo">
+            <img src="images/macro_pad_kicad.png" alt="Photo">
+            <img src="images/top_view.jpg" alt="Photo">
+        </div>
+    </div>

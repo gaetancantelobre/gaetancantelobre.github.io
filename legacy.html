@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HID Devices</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hey ! I'm Gaetan.</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rc_page.html">RC and FPV projects.</a></li>
+            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
+        </ul>
+
+        <h2>Project list :</h2>
+        <ul>
+            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
+            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
+            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
+            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
+            <li><a href="legacy.html">Tilt Indicator</a></li>
+            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+        </ul>
+
+        <h2>RC/FPV Project list :</h2>
+        <ul>
+            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
+            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
+            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
+            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="project-details-page">
+            <h1>HID Devices</h1>
+            <p>
+                This page is dedicated to all of my legacy,older projects !
+            </p>
+            <div>
+                <h2>Tilt Indicator</h2>
+                <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+                <p>
+                    One of my relatives is involved in competitive shooting and the cost of a shooting level is well into
+                    the
+                    hundreds of euros.
+                    So I challenged myself to build a low-cost Arduino-based shooting level and even if it is a bit large, I
+                    believe that I have completed my challenge.
+                    In the future, I may redesign it and make a single-board version for a smaller footprint.
+                </p>
+    
+    
+                <p> Arduino Nano based tilt indicator using a MPU6050 3-axis accelerometer and 3-axis gyroscope. Made
+                    for
+                    competitive shooters and airsoft use.
+                    The precision can be set in software as well as the mounting offset for the most precise experience. The
+                    first interaction on a breadboard used an OLED screen but through the feedback of the shooters, they
+                    wanted something that they could read in their peripheral vision.
+                    The current version uses 5 LEDs to indicate the direction and amplitude of the tilt. The base setting is
+                    precise to 3 degrees but can be cranked down to less.
+                    It can be powered through a 2S lipo battery or by USB.
+                    Designed in KiCad and produced with JLBPCB.
+                    For mounting I've designed a variety of mounts, from flat mounts to Picatinny rail mounts
+    
+                    More information on my <a
+                        href="https://github.com/gaetancantelobre/arduino_precision_tilt_sensor">github
+                        repo </a>!
+                </p>
+                
+                <div class="photo-gallery">
+                    <img src="images/tilt_sensor_kicad.png" alt="Photo">
+                    <img src="images/3_tilt_sensor.jpg" alt="Photo">
+                    <img src="images/sensor_gig.gif" alt="Photo">
+                </div>
+            </div>
+
+            <div>
+                <h2>Airsoft Defusing Game</h2>
+                <p>
+                    In the context of my weekend airsoft events, some admins of these events allow players to offer
+                    scenarios and props to make the games more interesting.
+                    My field already had a fake bomb but it was as simple as screwing a light bulb or flipping a switch. So
+                    I set out to make a more interactive bomb prop.
+                    I made my first "large" Arduino prototype. Then designed for the first time a PCB and produced it. The
+                    design is filled with problems, the circuit can be easily damaged: while "defusing the bomb" if you put
+                    the wires on the wrong connections you can short circuit.
+                    The is no reverse polarity protection, the Arduino Nano has its own but it can stop the use and abuse
+                    that an airsoft player can produce. (This problem was taken into account in my future projects).
+                    I ended up stopping the production as it was too complicated and they would break over and over again.
+                    There was also the fact that they ran on LiPo batteries which created a dangerous situation especially
+                    because of the lack of security features.
+                    I wish to showcase this project as a reminder of my beginnings and the errors I've made to continue to
+                    better my current designs.
+                </p>
+    
+    
+                <p>
+                    Arduino Nano-based airsoft scenario prop, where the user chooses an order in which wires have to be
+                    removed or
+                    the bomb will go "off" (its a toy, not a weapon). Powered by USB or 2s LiPo.
+                    More information on my <a href="https://github.com/gaetancantelobre/airsoft-bomb-prop">github repo </a>!
+    
+                </p>
+                
+                <div class="photo-gallery">
+                    <img src="images/airoft_pcb_bare.jpg" alt="Photo">
+                    <img src="images/airsoft_assembled.jpg" alt="Photo">
+                </div>
+            </div>
+
+            <a href="index.html">Back to Projects</a>
+        </div>
+    </div>
+</body>
+</html>

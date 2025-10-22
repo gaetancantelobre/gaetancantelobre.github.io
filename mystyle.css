@@ -1,4 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    margin-bottom: 20px;
+}
+
+.project-list img {
+    .project-list img {
+        max-width: 100px; /* Adjust the width as needed */
+        max-height: 100px; /* Adjust the height as needed */
+        object-fit: contain;
+    }
+}
+
+#presentation{
+    background-color: fuchsia;
+    margin-right: 1rem;
+    text-align: center;
+    height: fit-content;
+    block-size: auto;
+}
+
+
+#text_photo{
+    display: flex;
+}
+
+#item_block
+{
+    display: flex;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+  }
+
+.main-content {
+    margin-left: 22%; /* Adjust for sidebar width */
+    padding: 20px;
+}
+
+
+li{
+    padding: .3rem;
+}
+
+.project-div {
+    display: flex;
+    align-items: center;
+    margin-left: 22%;
+    margin-bottom: 20px;
+}
+
 img {
-    max-width: 450px;
-    max-height: 450px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* Adjust image aspect ratio as needed */
+    margin-right: 20px;
+}
+
+.project-details {
+    flex-grow: 1;
+}
+
+h2 {
+    margin: 0;
+    background-color: rgb(167, 180, 145);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.project-details-page {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.aboutme { 
+    margin-left: 22%;
+    
+}
+
+.aboutme p {
+    align-content: center;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
 }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HID Devices</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hey ! I'm Gaetan.</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rc_page.html">RC and FPV projects.</a></li>
+            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
+        </ul>
+
+        <h2>Project list :</h2>
+        <ul>
+            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
+            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
+            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
+            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
+            <li><a href="legacy.html">Tilt Indicator</a></li>
+            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+        </ul>
+
+        <h2>RC/FPV Project list :</h2>
+        <ul>
+            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
+            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
+            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
+            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="project-details-page">
+            <h1>HID Devices</h1>
+            <p>
+                This page is dedicated to all of my HID Device projects !
+            </p>
+            <div id="spacemouse">
+                <h2>3 DOF Space Mouse</h2>
+                 <h4> Skills : <b>CAD</b>, <b>Embedded systems</b></h4>
+                
+                <p> For most of my projects I design cases or parts for 3D printing.
+                 I use AutoDesk Fusion360 to design these parts.
+                 Space mice are not a new concept; they're a tool for controlling CAD programs with a bit more ergonomics.
+                 Imagine grabbing the object you are designing and rotating it by pushing down on a knob and moving it as if it was the object itself.<br>
+                 This avoids having to press down 3 or 4 buttons at a time to pan, orbit, or zoom in and out of 3D space.
+                 These mice can be particularly expensive for a name brand and multi-software compatible one.
+                 </p>
+                 <p> 
+                 I designed 2 versions:<br>
+                 Both versions are powered by a Pi Pico (Zero form factor).<br>
+                 The first one is based on a 4479 LIS3MDL 3-axis magnetometer from Adafruit. The original design had a magnet in the lower portion of the mouse and the magnetometer was
+                 suspended in air with springs, allowing for it to move around the magnet.<br>
+                 </p>
+                 <div class="photo-gallery">
+                    <img src="images/space_mouse/v2_full.JPG" alt="Photo">
+                    <img src="images/space_mouse/v2_knob.JPG" alt="Photo">
+                    
+                </div>
+                <p>
+                 The mouse is functional but this sensor is really sensitive and maxes out very easily.<br>
+                 I was using a neodymium magnet (which is pretty strong) but was still quite functional.<br>
+                 The real issues came from the metal strings and bolts holding everything together, they made the reading very hard to get regular.
+                 When pushing down to pan through space as if you were holding on to the ground and moving side to side, the springs would compress and create a stronger magnetic field.
+                 Similar issues arise from things like metal jewelry, things on the desk, etc. A whole lot of issues.<br>
+                 The second version which is much less interesting, is based on a joystick and a rotary encoder (it's kinda on the side burners for now). It can achieve the same thing or even more as it much more stable.<br>
+                 I was quite sad when my initial design wasn't reliable as when it came to signal analysis it was so much more interesting than just a normal joystick and digital knob.
+                </p>
+                <p> I did learn how rotary encoders work, which is a very low-tech way of tracking directional rotation, <a href="https://www.youtube.com/watch?v=v4BbSzJ-hz4&ab_channel=HowToMechatronics">This video </a> will explain it better than me.</p>
+                 <div class="photo-gallery">
+                    <img src="images/space_mouse/full.JPG" alt="Photo">
+                    <img src="images/space_mouse/mcu.JPG" alt="Photo">
+                    <img src="images/space_mouse/sensor.JPG" alt="Photo">
+                    <img src="images/space_mouse/cad.png" alt="Photo">
+                </div>
+
+                <p>
+                    On the software side of things, I used the "keyboard.h" Arduino library to simulate keystrokes and mouse movements.
+                    For the magnetometer version, we set soft limits on the 3 readings (One for each axis: roll, pitch, and up/down) and mapped them to keystrokes.
+                    For example: if the the up/down values are higher than the set limit, we set the mouse mode to panning (like if you were grabbing the object) else we set the mode of the mouse to orbit.<br>
+                    Combining the readings from the roll and pitch we can (in theory) efficiently tilt the 3D object in the same way that the user moves to the top part of the mouse.
+                </p>
+                <p>
+                    For the joystick and rotary encoder version, I simply map the values of the joystick to a linear function, more boring.
+                    We use the built-in button to set modes, and the encode to control zoom.<br>
+                    Once again all the code is on my <a href="https://github.com/gaetancantelobre/space_mouse"> GitHub </a>.
+                </p>
+            </div>
+
+
+
+
+
+            <div id="MacroPad">
+                <h2>QMK MacroPad</h2>
+                <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b></h4>
+
+                <p>     On a daily basis I only use a 60% keyboard which implies that I have to rely on complicated keystrokes to
+                    use media buttons, FN buttons, etc.
+                    Lacking easy access to these features I decided to dip my toes into the world of keyboard /
+                    macro pad design. I had already "built" custom keyboards but the building part was comparable to LEGO's
+                    and the software was already written and flashed into the PCBs.
+                    I did some research on button matrix and PCB design and went for it!
+                </p>
+    
+    
+                <p>     Multilayer macropad using QMK firmware and AutoHotKey script easily opens webpages, and applications
+                    and
+                    manages active media. Boosting a full custom PCB, 9 assignable buttons, and close to a limitless amount
+                    of
+                    layers to increase the number of available binds.
+                    For better feedback on the current binds and layer of the macro pad, a 128 x 32 pixel I2C OLED screen is
+                    situated at the top, indicating the current setup and changing at each level change.
+                    For the brains (microcontroller) I use the classic Arduino Pro Micro for its high GPIO count and small
+                    footprint.
+                    PCB was designed in KiCad and produced with JLBPCB.
+                </p>
+                <div class="photo-gallery">
+                    <img src="images/built_macropad.jpg" alt="Photo">
+                    <img src="images/pcb_macropad.jpg" alt="Photo">
+                    <img src="images/macro_pad_kicad.png" alt="Photo">
+                    <img src="images/top_view.jpg" alt="Photo">
+                </div>
+            </div>
+
+            <div id="kb">
+                <h2>TWIM IMPULSE - fully custom keyboard from PCB to software !</h2>
+                <h4> Skills : <b>PCB Design</b>, <b>CAD</b>, <b>Embedded systems</b>, <b>Product production</b>, <b>HID devices</b> </h4>
+
+                <p>
+                    Once again the need for the creation of this custom keyboard was cause by an everyday constraint :
+                    As said before I use 60% keyboards but all of the PCBs that i had built my keyboards off of were built for
+                    QWERTY keyboards.
+                    As a result at home, I would work and play on a QWERTY physical layout while using an AZERTY software layout
+                    and at the university, I would use a classic AZERTY keyboard.
+                    This situation was not optimal for my workflow and the development of my typing speed.
+                    I had two choices: either put all the keyboards I had made in the closet and buy an AZERTY keyboard or build
+                    an AZERTY keyboard.
+                    I choose the latter. Plus these make a unique present for friends and family.
+                </p>
+        
+        
+                <p>
+                    Pretty much the same thing as my Macropad but more effort was put into the design as well as the software,
+                    running a key matrix powered with an atmega32U4.
+                    Using QMK at first, then a more hands-on approach using some Arduino libraries like :
+                    "TinyUSB_Mouse_and_Keyboard" libraries allow the simulation of an HID interaction with the PC.
+                    Allowing also from simulating mouse movements the possibilities for built-in as endless: the memory is the
+                    limit (32Kb).
+                    I decided to drop using QMK as the whole software side was too hidden to my taste and now I have complete
+                    control. I could move servos with my keyboards if I wanted to!
+                    This custom PCB is carrying some custom art by me for an extra touch of funk.
+                    The PCB was designed in KiCad and produced with JLBPCB.
+                </p>
+                <div class="photo-gallery">
+                    <img src="images/kb/kb_keys.jpg" alt="Photo">
+                    <img src="images/kb/kb_switches.jpg" alt="Photo">
+                    <img src="images/kb/kb_pcb.jpg" alt="Photo">
+                    <img src="images/kb/kb_tm.jpg" alt="Photo">
+                </div>
+            </div>
+            <a href="index.html">Back to Projects</a>
+        </div>
+    </div>
+</body>
+</html>
