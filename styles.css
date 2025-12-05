@@ -1,0 +1,269 @@
+/* --- Global Reset & Typography --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* --- Main Layout Container (FULL WIDTH) --- */
+.portfolio-container {
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden; 
+    box-shadow: none;
+    min-height: 100vh;
+}
+
+/* --- Sidebar Styling (Left Column - FLEXIBLE WIDTH) --- */
+.sidebar {
+    width: 20%; 
+    min-width: 250px; 
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    flex-shrink: 0; 
+    height: 100vh; 
+    position: sticky; 
+    top: 0;
+    align-self: flex-start;
+}
+
+.sidebar-title {
+    font-size: 1.4em;
+    padding: 0 20px 10px;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-nav li a {
+    display: block;
+    padding: 10px 20px;
+    color: #bdc3c7;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95em;
+}
+
+.project-nav li a:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.project-links a {
+    padding-left: 30px;
+    border-left: 4px solid transparent;
+}
+
+.project-links li:first-child a {
+    background-color: #34495e; 
+    color: #ffffff;
+    border-left-color: #3498db;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 15px 20px;
+}
+
+/* --- Main Content Area Styling (Right Column - FILLS REMAINING WIDTH) --- */
+.project-list {
+    flex-grow: 1; 
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+/* --- Introduction Section Styling --- */
+.intro-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+}
+
+.intro-section .main-title {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #3498db;
+    border: none;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+}
+
+.intro-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #2c3e50;
+    border-radius: 4px;
+    color: #2c3e50;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.intro-link:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* --- Featured Showcase Section Styling --- */
+.featured-showcase {
+    display: flex;
+    background-color: #f7f9fb;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.showcase-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.showcase-content h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.showcase-content p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.showcase-image-container {
+    width: 45%; 
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.showcase-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* --- Project Card Styling --- */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.project-tag {
+    background-color: #3498db;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 8px; 
+}
+
+/* --- 3X PHOTO LAYOUT STYLES --- */
+.project-details-3x {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.project-showcase-3x {
+    display: flex;
+    gap: 10px; 
+    width: 100%;
+}
+
+.project-showcase-3x img {
+    flex: 1 1 0; 
+    height: 250px; 
+    /* CHANGED: Use 'contain' to ensure the entire image is visible, even if it leaves space */
+    object-fit: contain; 
+    display: block;
+    border-radius: 6px;
+    background-color: #ecf0f1; /* Added a light background color to fill the gaps left by 'contain' */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Added padding to give the contained image some breathing room */
+}
+
+.project-description-3x {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.project-description-3x p {
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- General Link Styling (Applies to GitHub Link) --- */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #3498db;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: flex-start; 
+}
+
+.github-link:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.github-link .icon {
+    margin-right: 8px;
+}
