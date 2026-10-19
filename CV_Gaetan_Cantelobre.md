@@ -1,4 +1,4 @@
-# Gaëtan Cantelobre
+# Gaétan Cantelobre
 **Embedded Systems Engineer**
 
 Bordeaux (33), France  
