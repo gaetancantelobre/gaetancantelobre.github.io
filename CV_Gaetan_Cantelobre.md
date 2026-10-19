@@ -54,7 +54,6 @@ Embedded Systems Engineer specializing in **C/C++, RTOS (FreeRTOS)**, and custom
 * **RTOS & Kernels:** FreeRTOS, In-house RTOS, Embedded Linux, Bare-metal
 * **Microcontrollers & Platforms:** STM32 (F4/G4), ESP32, RP2040, ATmega, NVIDIA Jetson Nano
 * **Hardware & Electronics:** PCB Design (KiCad Schematic & Layout), SMD Soldering & Hot-Plate Reflow, BMS Design
-* **Buses & Protocols:** SPI, I2C, UART, CAN bus, ExpressLRS (ELRS), Wi-Fi, Bluetooth Low Energy (BLE)
 * **Testing & Toolchains:** HIL/SIL Testing, GDB, Oscilloscopes, Logic Analyzers, Git, Docker, Make/CMake
 * **Languages (Human):** English (C1+ Fluent / LinguaSkill), French (Native)
 
