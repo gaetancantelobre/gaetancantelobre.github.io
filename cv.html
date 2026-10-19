@@ -13,7 +13,7 @@
 
         @page {
             size: A4 portrait;
-            margin: 10mm 12mm 10mm 12mm;
+            margin: 0;
         }
 
         body {
@@ -62,7 +62,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px 12px;
+            gap: 6px 12px;
             font-size: 8.2pt;
             color: #4b5563;
         }
@@ -248,6 +248,9 @@
             .no-print-bar {
                 display: none !important;
             }
+            body {
+                padding: 10mm 12mm 8mm 12mm;
+            }
             .cv-container {
                 padding: 0;
                 max-width: 100%;
@@ -258,7 +261,12 @@
 <body>
 
     <div class="no-print-bar">
-        <span>Gaétan Cantelobre — Curriculum Vitae (Print Template)</span>
+        <div>
+            <span><strong>Gaétan Cantelobre — Curriculum Vitae</strong></span>
+            <span style="margin-left: 16px; font-size: 11px; color: #9ca3af;">
+                Note: In the print dialog under <strong>More settings</strong>, uncheck <strong>"Headers and footers"</strong>.
+            </span>
+        </div>
         <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
 
@@ -276,16 +284,18 @@
                 <span><a href="mailto:gaetancantelobre@gmail.com">gaetancantelobre@gmail.com</a></span>
                 <span class="sep">|</span>
                 <span><a href="https://gaetancantelobre.github.io" target="_blank">gaetancantelobre.github.io</a></span>
-                <span class="sep">|</span>
+            </div>
+
+            <div class="contact-bar" style="margin-top: 3px;">
                 <span><a href="https://github.com/gaetancantelobre" target="_blank">github.com/gaetancantelobre</a></span>
                 <span class="sep">|</span>
                 <span><a href="https://www.linkedin.com/in/gaetan-cantelobre/" target="_blank">linkedin.com/in/gaetan-cantelobre</a></span>
+                <span class="sep">|</span>
+                <span>Dual Nationality: French / American (Eligible for Clearances)</span>
             </div>
 
             <div class="contact-bar" style="margin-top: 3px;">
                 <span>Master's in Embedded Software Development &mdash; Université de Bordeaux</span>
-                <span class="sep">|</span>
-                <span>Dual Nationality: French / American (Eligible for Clearances)</span>
             </div>
 
             <p class="summary-text">
