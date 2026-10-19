@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% Colors
+\definecolor{primary}{RGB}{15, 23, 42}
+\definecolor{accent}{RGB}{37, 99, 235}
+\definecolor{text}{RGB}{30, 41, 59}
+\definecolor{muted}{RGB}{100, 116, 139}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent
+}
+
+% Typography & Spacing
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=1pt,partopsep=0pt,parsep=1pt}
+\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\huge\textbf{\color{primary}GAËTAN CANTELOBRE}}\\[2pt]
+    {\large\textbf{\color{accent}EMBEDDED SYSTEMS ENGINEER}}\\[4pt]
+    \small
+    Bordeaux (33), France \quad$\cdot$\quad
+    \href{tel:+33783097425}{07 83 09 74 25} \quad$\cdot$\quad
+    \href{mailto:gaetancantelobre@gmail.com}{gaetancantelobre@gmail.com} \quad$\cdot$\quad
+    \href{https://gaetancantelobre.github.io}{gaetancantelobre.github.io}\\[2pt]
+    \href{https://github.com/gaetancantelobre}{github.com/gaetancantelobre} \quad$\cdot$\quad
+    \href{https://www.linkedin.com/in/gaetan-cantelobre/}{linkedin.com/in/gaetan-cantelobre} \quad$\cdot$\quad
+    Dual Nationality: \textbf{French / American}\\[2pt]
+    \textbf{Master’s in Embedded Software Development} --- Université de Bordeaux
+\end{center}
+
+\vspace{-4pt}
+\small
+Embedded Systems Engineer specializing in \textbf{C/C++, FreeRTOS}, and custom electronics for \textbf{Avionics, Defense, and Autonomous Systems}. Experienced across the complete development lifecycle from schematic capture and board bring-up to deterministic flight firmware and automated HIL qualification benches in aerospace environments (\textbf{Thales, Delair}).
+
+% Professional Experience
+\section{Professional Experience}
+
+\textbf{Embedded / Autopilot Engineer} \hfill \textit{April 2026 -- Present | CDI}\\
+\textbf{\color{accent}DELAIR} \hfill Toulouse, France
+\vspace{2pt}
+\begin{itemize}
+    \item \textbf{Autopilot Software Development (GNC):} Developed autonomous flight control modes in FreeRTOS, including automated waypoint flight patterns, maritime vessel landings, and evasive maneuvers.
+    \item \textbf{Standards \& Compliance:} Enforced software reliability and cybersecurity compliance in adherence to \textbf{ISO/IEC 25010} and \textbf{ISO/IEC 27001}.
+    \item \textbf{Aero Vectors:} Engineered flight software for both loitering munitions and long-range intelligence, surveillance, and reconnaissance (ISR) UAVs.
+    \item \textbf{State Estimation:} Implemented Extended Kalman Filter (EKF) algorithms for robust navigation under nominal and GPS-denied conditions.
+    \item \textbf{SIL / HIL / Flight Testing:} Conducted rigorous qualification campaigns across Software-in-the-Loop, Hardware-in-the-Loop, and live flight trials.
+    \item \textbf{Telemetry Analysis:} Integrated ML and LLM telemetry pipelines for automated flight data recorder (black box) pre-analysis.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Embedded / Real-Time Developer} \hfill \textit{April 2025 -- September 2025 | Master's Internship}\\
+\textbf{\color{accent}THALES SIX GTS} \hfill Cholet / Bordeaux, France
+\vspace{2pt}
+\begin{itemize}
+    \item \textbf{Timing Driver Development:} Architected a microsecond-precision timing driver for tactical radio test systems using C++ (11/17) and Python on HIL benches.
+    \item \textbf{Deterministic Execution:} Integrated the driver into a real-time OS environment, reducing test cycle latency and maximizing throughput.
+    \item \textbf{Toolchain Modernization:} Re-engineered legacy embedded diagnostic workflows, significantly cutting troubleshooting time for complex faults.
+    \item \textbf{Automated Telemetry:} Implemented automated Python telemetry and error-tracking scripts, improving real-time system observability.
+\end{itemize}
+
+% Skills
+\section{Technical Skills}
+\small
+\begin{tabularx}{\textwidth}{@{}ll@{}}
+    \textbf{Languages:} & C, C++ (11/17), Python, Bash, Inline Assembly \\
+    \textbf{RTOS \& Kernels:} & FreeRTOS, In-house RTOS, Embedded Linux, Bare-metal \\
+    \textbf{Hardware \& MCUs:} & STM32 (F4/G4), ESP32, RP2040, ATmega, NVIDIA Jetson Nano, KiCad PCB Design, SMD Reflow \\
+    \textbf{Protocols \& Buses:} & SPI, I2C, UART, CAN bus, ExpressLRS (ELRS), Wi-Fi, Bluetooth Low Energy (BLE) \\
+    \textbf{Testing \& Tools:} & HIL/SIL Testing, GDB, Oscilloscopes, Logic Analyzers, Git, Docker, Make/CMake \\
+    \textbf{Languages (Human):} & English (C1+ Fluent / LinguaSkill), French (Native) \\
+\end{tabularx}
+
+% Key Projects
+\section{Key Engineering Projects}
+
+\textbf{Drone Défense Hackathon (Challenge 4) --- French Army Logistics} \hfill \textit{Paris (2025)}
+\begin{itemize}
+    \item Architected an autonomous drone delivery and tactical logistics infrastructure concept for forward military operations.
+    \item Implemented A* and RRT pathfinding algorithms for real-time trajectory optimization and collision avoidance.
+    \item Developed full-stack mission dashboards and telemetry visualization for command-and-control operations.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Machine Learning-Enhanced Digital Level --- Competitive Shooting} \hfill \textit{Hardware \& Firmware}
+\begin{itemize}
+    \item Designed custom ESP32-C3 PCB featuring an LSM6DSL 6-axis IMU, magnetic WS2812B LED array, and custom Li-ion BMS.
+    \item Deployed on-device TinyML classification to detect rifle cant instability and erratic barrel motion prior to trigger break.
+    \item Developed firmware in C++ using ESP-IDF, maximizing battery life through deep sleep power management.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Custom UAV Design \& Flight Controller Development --- Avionics} \hfill \textit{Hardware \& Firmware}
+\begin{itemize}
+    \item Designed aerodynamic 3D-printed airframes using OpenVSP and Fusion 360, adhering to sub-250g AUW weight constraints.
+    \item Engineered 3 custom STM32G4-based flight controller boards running custom FreeRTOS firmware.
+    \item Integrated ExpressLRS (ELRS) serial communication protocols for low-latency control and real-time telemetry.
+\end{itemize}
+
+\end{document}
