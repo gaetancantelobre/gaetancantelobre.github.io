@@ -3,454 +3,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaetan's Portfolio - Projects</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Gaëtan Cantelobre - Embedded Systems Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Gaëtan Cantelobre, Junior Embedded Systems Engineer. Custom hardware, avionics, firmware, and PCB design.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Mobile Top Navigation Bar -->
+    <header class="mobile-header">
+        <span class="mobile-logo">⚡ Gaëtan Cantelobre</span>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span id="menu-icon">☰</span> Menu
+        </button>
+    </header>
+
     <div class="portfolio-container">
         
-        <aside class="sidebar">
-            <h2 class="sidebar-title">All Projects</h2>
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <h2 class="sidebar-title">
+                Gaëtan Cantelobre
+                <span class="sidebar-subtitle">Embedded Systems Engineer</span>
+            </h2>
             <nav class="project-nav">
                 <ul>
                     <li><a href="#intro-section">Introduction</a></li>
-                    <li><a href="#pcb-wall">PCB WALL (Featured)</a></li>
+                    <li><a href="#pcb-wall">PCB Wall (Featured)</a></li>
                 </ul>
                 <hr>
+                <div class="nav-section-title">Projects</div>
                 <ul class="project-links">
-                    <li><a href="#500mm_2s_deltawing">1.2M sub 250 gram deltawing</a></li>
-                    <li><a href="#smol-led-matrix">SMOL WS2812B LED MATRIX (Hardware)</a></li>
-                    <li><a href="#dcdc-converter">12V to 5V 3A DCDC Converter (Hardware)</a></li>
-                    <li><a href="#tilt-indicator">Tilt Indicator for Competitive Shooting (Hardware/Software)</a></li>
-                    <li><a href="#esp32-c3-breakout">ESP32-C3-MINI-BREAKOUT Dev Board (Hardware)</a></li>
-                    <li><a href="#maze-generator-dfs">Maze Generator (Software)</a></li>
-                    <li><a href="#lipo-bms">1S LiPo/Li-ion BMS (Hardware)</a></li>
-                    <li><a href="#delta-wing">Delta-Wing Build (Avionic)</a></li>
-                    <li><a href="#tonton-board">TonTon Board (Hardware)</a></li>
-                    <li><a href="#tonton-board-balatro">TonTon Board (Balatro) (Hardware)</a></li>
-                    <li><a href="#3-dof-space-mouse">3 DOF Space Mouse (Hardware)</a></li>
-                    <li><a href="#qmk-macropad">QMK Macropad (Hardware)</a></li>
-                    <li><a href="#twim-impulse-azerty">TWIM IMPULSE Keyboard (Hardware)</a></li>
-                    <li><a href="#simon-keychain-rp2040">Simon Clone Keychain (Hardware)</a></li>
+                    <li><a href="#rrt-path-finding">RRT Pathfinding Simulation</a></li>
+                    <li><a href="#1_2m-deltawing">1.2m Sub-250g Delta Wing</a></li>
+                    <li><a href="#smol-led-matrix">SMOL WS2812B LED Matrix</a></li>
+                    <li><a href="#dcdc-converter">12V to 5V 3A DC-DC Converter</a></li>
+                    <li><a href="#tilt-indicator">Tilt Indicator for Target Shooting</a></li>
+                    <li><a href="#esp32-c3-breakout">ESP32-C3 Custom Dev Board</a></li>
+                    <li><a href="#maze-generator-dfs">Maze Generator (DFS) &amp; PCB Art</a></li>
+                    <li><a href="#lipo-bms">1S LiPo/Li-ion BMS</a></li>
+                    <li><a href="#delta-wing">Sub-100g Endurance Delta Wing</a></li>
+                    <li><a href="#tonton-board">TonTon Custom Keyboard</a></li>
+                    <li><a href="#tonton-board-balatro">TonTon Keyboard (Balatro Edition)</a></li>
+                    <li><a href="#3-dof-space-mouse">3 DOF CAD Space Mouse</a></li>
+                    <li><a href="#qmk-macropad">QMK Programmable Macropad</a></li>
+                    <li><a href="#twim-impulse-azerty">TWIM IMPULSE AZERTY Keyboard</a></li>
+                    <li><a href="#simon-keychain-rp2040">Simon Clone Keychain (RP2040)</a></li>
                 </ul>
             </nav>
         </aside>
 
+        <!-- Main Content Area -->
         <main class="project-list">
             
+            <!-- Introduction Section -->
             <section id="intro-section" class="intro-section">
-                <h1 class="main-title">Hi, I'm Gaetan!</h1>
+                <h1 class="main-title">Hi, I'm <span class="highlight">Gaëtan</span>!</h1>
                 <p class="intro-text">
-                    Junior Embedded Systems Engineer - Hire me ! 
-                    <br>Master's in Embedded Systems (ASPIC : AUTONOMOUS SYSTEMS, INTERACTION & CONTROL).
-                    <br>I design and build embedded software and hardware for avionics and more.
-                    <br>I thrive to make things from my own hands, my passion and urge to learn always pushes me towards new projects.</p>
+                    <strong>Junior Embedded Systems Engineer</strong> — Available for hire!
+                    <br>Master's in Embedded Systems (ASPIC: Autonomous Systems, Interaction &amp; Control).
+                    <br>I design and build embedded software and custom hardware for avionics, robotics, and human-interface devices.
+                    <br>I thrive on creating things with my own hands; my passion and drive to learn continuously push me toward new and challenging projects.
+                </p>
                 
                 <div class="contact-links">
-                    <a href="mailto:gaetancantelobre@gmail.com" class="intro-link">Email Me</a>
-                    <a href="https://www.linkedin.com/in/gaetan-cantelobre/" target="_blank" class="intro-link">LinkedIn</a>
-                    <a href="https://github.com/gaetancantelobre" target="_blank" class="intro-link">GitHub</a>
+                    <a href="mailto:gaetancantelobre@gmail.com" class="intro-link">
+                        <span class="icon">✉</span> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/gaetan-cantelobre/" target="_blank" rel="noopener noreferrer" class="intro-link">
+                        <span class="icon">🔗</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/gaetancantelobre" target="_blank" rel="noopener noreferrer" class="intro-link">
+                        <span class="icon">💻</span> GitHub
+                    </a>
+                    <a href="CV_GC_2025_11_29.pdf" target="_blank" rel="noopener noreferrer" class="intro-link resume-btn">
+                        <span class="icon">📄</span> View Resume / CV
+                    </a>
                 </div>
             </section>
             
+            <!-- Featured Showcase (PCB Wall) -->
             <section id="pcb-wall" class="featured-showcase">
                 <div class="showcase-content">
-                    <h2>My PCB wall: Where all PCBs go after a project is finished (the working ones, at least).</h2>
+                    <h2>My PCB Wall: Where all circuit boards go after a project is finished (the working ones, at least).</h2>
                     
-                    <h3> Ongoing projects :</h3>
+                    <h3>Ongoing projects:</h3>
                     <ul>
-                    <li>sub 250 gram combat robot (inertial weapon) : waiting for parts to arrive</li>
-                    <li>
-                        V4 of BEL STM32G4 based with integrated BMS and WS2812B LED MATRIX INDICATOR : PCB arrived & waiting for parts to arrive
-                    </li>
-                    <li>Over engineered solder extraction fan controler powered by 2 cell Li-Po batteries, 2 DC DC converters , powered by a STM8 and written in inline assembler :  PCB arrived & waiting for parts to arrive</li>
-                    <li>V3 of STM32F4 fixed wing flight controller, 6 AXIS IMU, barometer, magnetometer ,ELRS interface, VTX power, GPS interface, Betaflight, Ardupilot compatible, written in C++ : PCB almost done & waiting for parts to arrive</li>
-
-
-
-                </ul>
+                        <li><strong>Sub-250g combat robot (inertial weapon):</strong> Waiting for parts to arrive.</li>
+                        <li><strong>V4 BEL (Better Electronic Level):</strong> STM32G4-based with integrated BMS and WS2812B LED matrix indicator — PCB arrived, waiting for components.</li>
+                        <li><strong>Over-engineered solder fume extraction fan controller:</strong> Powered by a 2-cell Li-Po battery, dual DC-DC converters, an STM8 MCU, and firmware written in inline assembly — PCB arrived, waiting for components.</li>
+                        <li><strong>V3 STM32F4 fixed-wing flight controller:</strong> 6-axis IMU, barometer, magnetometer, ELRS interface, VTX power, GPS interface; Betaflight and ArduPilot compatible, written in C++ — PCB routing nearly complete.</li>
+                    </ul>
                 </div>
                 <div class="showcase-image-container">
-                    <img src="images/pcb_wall.jpg" alt="A large, high-impact photo of the Sentinel Drone project">
+                    <img src="images/pcb_wall.jpg" alt="Gaëtan's PCB wall displaying various custom fabricated circuit boards">
                 </div>
             </section>
 
-
-            <section id="500mm_2s_deltawing" class="project-card">
+            <!-- RRT Pathfinding Simulation -->
+            <section id="rrt-path-finding" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">RTT path finding simulation</h2>
-                    <span class="project-tag">(Software)</span>
+                    <h2 class="project-title">RRT Pathfinding Simulation</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-software">Software</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/rrt/demo.gif" alt="full view of plane">
-                        <img src="images/rrt/example3.png" alt="full view of plane">
-                        <img src="images/rrt/example2.png" alt="full view of plane">
-
-                       
-                        </div>
+                        <img src="images/rrt/demo.gif" alt="Animated demonstration of the RRT pathfinding algorithm with spline smoothing">
+                        <img src="images/rrt/example3.png" alt="RRT path planning simulation with complex obstacle configuration">
+                        <img src="images/rrt/example2.png" alt="RRT trajectory generation across 2D terrain">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            A quick Python projects that allows to visualize and stress test a RRT + quadratic  spline algorithm. You can modify the ground, the number of obstacles, the resolution of the RRT jumps, etc. in the config file.
+                            A Python project to visualize and stress-test a Rapidly-exploring Random Tree (RRT) pathfinding algorithm paired with quadratic spline smoothing. Ground terrain, obstacle density, step resolution of RRT jumps, and other parameters are fully customizable in the configuration file.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/python_rrt_spline" target="_blank" class="github-link">
+                        <a href="https://github.com/gaetancantelobre/python_rrt_spline" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
-
-            <section id="500mm_2s_deltawing" class="project-card">
+            <!-- 1.2m Delta Wing -->
+            <section id="1_2m-deltawing" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">3D PRINTED 1.2 meter sub 250 gram deltawing</h2>
-                    <span class="project-tag">(Avionic)</spa n>
+                    <h2 class="project-title">3D-Printed 1.2-Meter Sub-250g Delta Wing</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-avionics">Avionics</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/1_2M_deltawing/full_frame.jpg" alt="full view of plane">
-                        <img src="images/1_2M_deltawing/3D print.gif" alt="SMOL LED matrix back view">
-                        <img src="images/1_2M_deltawing/fusion.png" alt="SMOL LED matrix back view">
-                        <img src="images/1_2M_deltawing/crash.jpg" alt="wing close up">
-                        </div>
+                        <img src="images/1_2M_deltawing/full_frame.jpg" alt="Fully assembled 1.2-meter 3D-printed delta wing">
+                        <img src="images/1_2M_deltawing/3D print.gif" alt="3D printing process of the lightweight wing structure">
+                        <img src="images/1_2M_deltawing/fusion.png" alt="CAD modeling in Autodesk Fusion 360">
+                        <img src="images/1_2M_deltawing/crash.jpg" alt="Post-flight wing inspection after field tests">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            I love delta wings (not sure they love me). I designed a 1.2m, sub-250-gram (232g) RC delta wing running on 2S Li-Pos. I designed the wing in OpenVSP and then made the fuselage and the control surfaces in Fusion360.
-
-It was printed in LW-PLA, allowing the full wing halves (for a 500mm span) to weigh about 100 grams. The wing has an aspect ratio of 5.4, making it more of a glider. I used six aluminum tubes as spars (or truss rods) in the wing.
-
-The only downside to 3D printed planes is that they are brittle and don't last long after some rough landings.
-
-Check it out on my GitHub; there is more info there! 
+                            I love delta wings. I designed a 1.2-meter, sub-250-gram (232g AUW) RC delta wing running on 2S Li-Po batteries. The airfoil and wing geometry were designed in OpenVSP, with the fuselage and elevon control surfaces modeled in Autodesk Fusion 360.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/sub_250g_delta_wing" target="_blank" class="github-link">
+                        <p>
+                            The airframe was printed in foaming Lightweight PLA (LW-PLA), keeping the full wing panels (for a 500mm chord span) down to approximately 100 grams. With an aspect ratio of 5.4, the aircraft functions efficiently as a thermal glider. Structural rigidity is reinforced using six aluminum tubes as internal spars and truss rods.
+                        </p>
+                        <p>
+                            While 3D-printed planes are brittle during hard landings, this build proved how viable ultra-lightweight printed airframes can be.
+                        </p>
+                        <a href="https://github.com/gaetancantelobre/sub_250g_delta_wing" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
-
+            <!-- SMOL LED Matrix -->
             <section id="smol-led-matrix" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">SMOL WS2812B LED MATRIX</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">SMOL WS2812B LED Matrix</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/smol_board/gif_smol.gif" alt="SMOL LED matrix demo GIF">
-                        <img src="images/smol_board/front.jpg" alt="SMOL LED matrix front view">
-                        <img src="images/smol_board/back.jpg" alt="SMOL LED matrix back view">
-
-                        </div>
+                        <img src="images/smol_board/gif_smol.gif" alt="SMOL LED matrix demo running animated light sequences">
+                        <img src="images/smol_board/front.jpg" alt="Front view of the 5x5 micro WS2812B matrix">
+                        <img src="images/smol_board/back.jpg" alt="Rear view of the ultra-compact PCB">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            A <strong>custom-built SMOL 5x5 WS2812B matrix</strong>, but the LEDs are just 1mm x 1mm. I have an obsession with how small things like this can get. I hope to make an even smaller one in the future.
+                            A custom-built ultra-compact <strong>5&times;5 addressable LED matrix</strong> utilizing miniaturized 1mm &times; 1mm WS2812B LEDs. Driven by a fascination with high-density PCB layouts and miniaturization limits, this project pushed precision SMD soldering and compact trace routing.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/1mm_W2812B_10x10_plate" target="_blank" class="github-link">
+                        <a href="https://github.com/gaetancantelobre/1mm_W2812B_10x10_plate" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- DC-DC Converter -->
             <section id="dcdc-converter" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">12V to 5V 3A DCDC Converter</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">12V to 5V 3A DC-DC Buck Converter</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/DCDC/built.png" alt="Assembled DCDC converter photo">
-                        <img src="images/DCDC/bqck.png" alt="DCDC converter back photo">
-                        <img src="images/DCDC/proof.png" alt="DCDC converter proof of work photo">
-
-                        </div>
+                        <img src="images/DCDC/built.png" alt="Assembled DC-DC step-down converter board">
+                        <img src="images/DCDC/bqck.png" alt="Rear side featuring algorithm-generated silkscreen art">
+                        <img src="images/DCDC/proof.png" alt="Oscilloscope testing and proof-of-work load test">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            Simple DCDC converter for the prototyping phase of my project. The back art is created by my DFS algorithm.
+                            A high-efficiency 12V to 5V 3A step-down DC-DC switching regulator designed as a reliable power supply for prototyping embedded projects. The decorative silkscreen art on the reverse side of the board was generated programmatically using my custom Depth-First Search (DFS) maze algorithm.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/1mm_W2812B_10x10_plate" target="_blank" class="github-link">
-                            <span class="icon">🔗</span> View on GitHub
+                        <a href="https://github.com/gaetancantelobre/pcb_art_dfs" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <span class="icon">🔗</span> View Art Generator on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
-
+            <!-- Tilt Indicator -->
             <section id="tilt-indicator" class="project-card">
                 <div class="project-header">
                     <h2 class="project-title">Tilt Indicator for Competitive Shooting</h2>
-                    <span class="project-tag">(Hardware)</span>
-                    <span class="project-tag">(Software)</span>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                        <span class="project-tag tag-software">Software</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/ti/esp32_demo.gif" alt="Tilt Indicator front view GIF">
-                        <img src="images/ti/sensor_gig.gif" alt="Tilt Indicator sensor demo GIF">
-                        <img src="images/ti/board_evolution.jpg" alt="Tilt Indicator PCB evolution"> 
+                        <img src="images/ti/esp32_demo.gif" alt="Tilt Indicator operational demonstration">
+                        <img src="images/ti/sensor_gig.gif" alt="Real-time tilt sensor calibration test">
+                        <img src="images/ti/board_evolution.jpg" alt="Evolution of PCB revisions across four generations">
                     </div>
                     <div class="project-description-3x">
-                        <p>For my brother, who is involved in sport shooting, I created a <strong>3-axis tilt indicator</strong>. The design is ever evolving as I'm currently on my 4th iteration, going from Arduino Nano (ATmega328P) &rarr; <strong>ESP32-C3</strong> &rarr; STM8 &rarr; STM32G4. I went from built-in THT diodes to external WS2812B LED-based boards, providing a resolution of a quarter of a degree.
-                        <p>It's ever evolving! The current version is <strong>ESP32-C3 based</strong> with magnetic WS2812B LED boards for ease of use, providing a resolution of a quarter of a degree.</p>
-                        </p> 
-                        <a href="https://github.com/gaetancantelobre/better_electronic_level/" target="_blank" class="github-link">
+                        <p>
+                            Designed for competitive target shooting, this digital <strong>3-axis electronic level</strong> provides rapid visual feedback to prevent canting errors. The project has undergone continuous refinement across four hardware iterations: from an initial Arduino Nano (ATmega328P) prototype to an ESP32-C3, STM8, and ultimately an STM32G4 architecture.
+                        </p>
+                        <p>
+                            The system evolved from through-hole LEDs to magnetic modular boards equipped with addressable WS2812B LEDs, delivering a precision readout down to a quarter of a degree (0.25&deg;).
+                        </p>
+                        <a href="https://github.com/gaetancantelobre/better_electronic_level" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
             
+            <!-- ESP32-C3 Breakout -->
             <section id="esp32-c3-breakout" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">ESP32-C3-MINI-BREAKOUT Custom Dev Board</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">ESP32-C3-MINI-BREAKOUT Development Board</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/esp32_b/snok.gif" alt="ESP32 Board demo GIF">
-                        <img src="images/esp32_b/boards.jpg" alt="Assembled ESP32 boards">
-                        <img src="images/esp32_b/back_render.png" alt="ESP32 board back render">
+                        <img src="images/esp32_b/snok.gif" alt="ESP32-C3 board running firmware demo">
+                        <img src="images/esp32_b/boards.jpg" alt="Batch of fabricated and assembled ESP32 breakout boards">
+                        <img src="images/esp32_b/back_render.png" alt="3D CAD render of the board bottom layer">
                     </div>
                     <div class="project-description-3x">
-                        <p>This project showcases a compact and versatile development board built around the powerful <strong>ESP32-C3-mini-1U-H4X</strong> module, complete with all the necessary KiCad design files and example firmware.</p>
-                        
-                        <a href="https://github.com/gaetancantelobre/ESP32_C3_MINI_BREAKOUT" target="_blank" class="github-link">
-                            <span class="icon">🔗</span> View on GitHub
-                        </a>
-
-                        <a href="https://www.linkedin.com/posts/gaetan-cantelobre_microcontroller-electronics-embeddedsystems-activity-7352947976077541379-G2HL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE01mEkBH6GDsLI2WvDkR0UdowA-sMZ4vTo"> Check out my build video.</a>
+                        <p>
+                            A compact and versatile development board designed around the RISC-V <strong>ESP32-C3-mini-1U-H4X</strong> module. The board breaks out all essential I/O pins, provides robust power conditioning, and includes complete KiCad schematic, layout, and manufacturing files alongside sample firmware.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://github.com/gaetancantelobre/ESP32_C3_MINI_BREAKOUT" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <span class="icon">🔗</span> View on GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/posts/gaetan-cantelobre_microcontroller-electronics-embeddedsystems-activity-7352947976077541379-G2HL" target="_blank" rel="noopener noreferrer" class="secondary-link">
+                                <span class="icon">▶</span> Watch Build Video
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Maze Generator DFS -->
             <section id="maze-generator-dfs" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">Maze Generator (Depth-First Search) & Tile Stitcher for PCB Art</h2>
-                    <span class="project-tag">(Software)</span>
+                    <h2 class="project-title">Maze Generator (DFS) &amp; Tile Stitcher for PCB Art</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-software">Software</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/dfs_art/empty_grid.png" alt="Empty grid maze">
-                        <img src="images/dfs_art/grid.png" alt="Full grid maze">
-                        <img src="images/dfs_art/ascii.png" alt="Maze PATTERN ART">
+                        <img src="images/dfs_art/empty_grid.png" alt="Initial 2D grid before maze generation">
+                        <img src="images/dfs_art/grid.png" alt="Fully generated maze path through Depth-First Search">
+                        <img src="images/dfs_art/ascii.png" alt="Rendered ASCII tile pattern art">
                     </div>
                     <div class="project-description-3x">
-                        <p>This project generates randomized mazes inside a 2D grid and renders them as both animated ASCII paths in the terminal and stitched PNG images using tile sprites. Check out the <a href="https://www.youtube.com/shorts/subWmqcxC2M">YouTube video</a>!</p>
-                        
-                        <a href="https://github.com/gaetancantelobre/pcb_art_dfs" target="_blank" class="github-link">
-                            <span class="icon">🔗</span> View on GitHub
-                        </a>
+                        <p>
+                            A procedural maze generation tool using Depth-First Search (DFS) with backtracking. It outputs animated ASCII paths directly to the terminal and stitches sprite tiles into high-resolution PNG patterns suitable for silkscreen artwork on custom PCBs.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://github.com/gaetancantelobre/pcb_art_dfs" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <span class="icon">🔗</span> View on GitHub
+                            </a>
+                            <a href="https://www.youtube.com/shorts/subWmqcxC2M" target="_blank" rel="noopener noreferrer" class="secondary-link">
+                                <span class="icon">▶</span> Watch Demo on YouTube
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- 1S LiPo/Li-ion BMS -->
             <section id="lipo-bms" class="project-card">
                 <div class="project-header">
                     <h2 class="project-title">1S LiPo/Li-ion BMS (BQ21040DBVT)</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/bms/bms_gif.gif" alt="BMS demonstration GIF">
-                        <img src="images/bms/pcb_render.png" alt="BMS PCB render">
-                        <img src="images/bms/pcb_kicad.png" alt="BMS KiCad schematic view">
+                        <img src="images/bms/bms_gif.gif" alt="BMS charging and protection demonstration">
+                        <img src="images/bms/pcb_render.png" alt="3D render of the 1S BMS board">
+                        <img src="images/bms/pcb_kicad.png" alt="KiCad PCB routing and schematic layout">
                     </div>
                     <div class="project-description-3x">
-                        <p>This repository contains all the design files for a single-cell (1s) <strong>Battery Management System (BMS)</strong> for Lithium-Polymer (LiPo) and Lithium-Ion (Li-ion) batteries. The core of this design is the Texas Instruments BQ21040DBVT, a highly integrated battery charger and protection IC.</p>
-                        
-                        <a href="https://github.com/gaetancantelobre/pcb_art_dfs" target="_blank" class="github-link">
+                        <p>
+                            A single-cell (1S) <strong>Battery Management System (BMS)</strong> engineered for Lithium-Polymer and Lithium-Ion cells. Built around the Texas Instruments BQ21040DBVT linear charger and integrated protection circuitry, it provides controlled constant-current/constant-voltage charging, thermal monitoring, and over-current protection in an ultra-compact footprint.
+                        </p>
+                        <a href="https://github.com/gaetancantelobre/1S_LIPO_LION_BMS" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- Sub-100g Delta Wing -->
             <section id="delta-wing" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">Delta-Wing Build</h2>
-                    <span class="project-tag">(AVIONIC)</span>
+                    <h2 class="project-title">Sub-100g Endurance Delta Wing</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-avionics">Avionics</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/b2/plane_flight.gif" alt="Delta wing flight GIF">
-                        <img src="images/b2/plane_duo.JPG" alt="Delta wing duo photo">
-                        <img src="images/b2/bat_comp.JPG" alt="Battery comparison photo">
+                        <img src="images/b2/plane_flight.gif" alt="Low-speed endurance flight of the mini delta wing">
+                        <img src="images/b2/plane_duo.JPG" alt="Pair of custom-built mini delta wings">
+                        <img src="images/b2/bat_comp.JPG" alt="Comparison between 18650 Li-ion cell and traditional Li-Po pack">
                     </div>
                     <div class="project-description-3x">
-                        <p>1 hour flight time under 100 grams? A <strong>40cm wingspan delta-wing</strong> able to fly for over an hour at a total weight of <strong>+/- 93 grams</strong>. A proof-of-concept project proving that Li-ion batteries allow for greater energy density in single-cell setups.
+                        <p>
+                            Can a sub-100-gram aircraft fly for over an hour? This proof-of-concept project features a <strong>40cm wingspan delta wing</strong> weighing just <strong>~93 grams</strong> all-up weight (AUW). By capitalizing on the high energy density of an 18650 Li-ion cell (102.9 mAh/g vs. 33.3 mAh/g for equivalent Li-Po), the aircraft achieved remarkable flight endurance in an ultra-micro category.
                         </p>
-                        
+                        <a href="B2_60_100.html" class="github-link">
+                            <span class="icon">📖</span> Read Project Writeup
+                        </a>
                     </div>
                 </div>
             </section>
 
+            <!-- TonTon Board -->
             <section id="tonton-board" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">TonTon Board</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">TonTon Custom Mechanical Keyboard</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/tt_board/clavier.jpg" alt="TonTon keyboard photo">
-                        <img src="images/tt_board/custom_grids.jpg" alt="TonTon keyboard grids photo">
-                        <img src="images/tt_board/tt_board_80_pcb.png" alt="TonTon 80% PCB render">
-
-                        </div>
+                        <img src="images/tt_board/clavier.jpg" alt="Assembled TonTon custom mechanical keyboard">
+                        <img src="images/tt_board/custom_grids.jpg" alt="Structural switch plate grid design">
+                        <img src="images/tt_board/tt_board_80_pcb.png" alt="TonTon 80% layout PCB render">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            A custom keyboard for my friends and me, designed and built by me.
+                            A fully custom mechanical keyboard designed and manufactured from the ground up for friends and personal use. Designed in KiCad with custom switch matrix routing, ergonomic layout spacing, and precision plate integration.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/tonton_board" target="_blank" class="github-link">
+                        <a href="https://github.com/gaetancantelobre/tonton_board" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- TonTon Board Balatro -->
             <section id="tonton-board-balatro" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">TonTon Board (Balatro)</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">TonTon Board (Balatro Edition)</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/tt_board/balatro.jpg" alt="Balatro themed keyboard photo">
-                        <img src="images/tt_board/kicad_balatro.png" alt="Balatro keyboard KiCad view">
-                        <img src="images/tt_board/baltro_3d.png" alt="Balatro keyboard 3D render">
-
-                        </div>
+                        <img src="images/tt_board/balatro.jpg" alt="Balatro-themed custom keyboard with themed keycaps">
+                        <img src="images/tt_board/kicad_balatro.png" alt="KiCad PCB layout with custom poker-inspired silkscreen">
+                        <img src="images/tt_board/baltro_3d.png" alt="3D CAD render of the 60% Balatro keyboard">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            A custom keyboard for my friends and me, designed and built by me. This time it's <strong>Balatro themed</strong>, featuring a script that creates grids to increase rigidity in the keys.
+                            A 60% custom keyboard iteration themed around the poker roguelike <em>Balatro</em>. This revision features a Python-generated internal grid structure to significantly increase switch plate rigidity and deliver consistent acoustic feedback.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/60_tonton_board" target="_blank" class="github-link">
+                        <a href="https://github.com/gaetancantelobre/60_tonton_board" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- 3 DOF Space Mouse -->
             <section id="3-dof-space-mouse" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">3 DOF Space Mouse</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">3 DOF Space Mouse for CAD Navigation</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/space_mouse/full.JPG" alt="Space mouse photo">
-                        <img src="images/space_mouse/sensor.JPG" alt="Space mouse sensor view">
-                        <img src="images/space_mouse/cad.png" alt="Space mouse CAD render">
-
-                        </div>
+                        <img src="images/space_mouse/full.JPG" alt="Assembled 3 DOF space mouse">
+                        <img src="images/space_mouse/sensor.JPG" alt="Internal 3-axis magnetometer and suspension assembly">
+                        <img src="images/space_mouse/cad.png" alt="Exploded CAD assembly view in Autodesk Fusion 360">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            For most of my projects, I design cases or parts for 3D printing using AutoDesk Fusion360. Space mice are not a new concept; they're a tool for controlling CAD programs with better ergonomics. Imagine grabbing the object you are designing and rotating it by pushing down on a knob and moving it as if it were the object itself. This avoids having to press down three or four buttons at a time to pan, orbit, or zoom in and out of 3D space. Name-brand, multi-software compatible space mice can be particularly expensive.
+                            Commercial 3D space mice for CAD modeling in Autodesk Fusion 360 are notoriously expensive. To create an ergonomic, accessible alternative, I designed a 3-Degree-of-Freedom (3 DOF) controller powered by a Raspberry Pi Pico.
                         </p>
-                        <a href="https://github.com/gaetancantelobre/space_mouse" target="_blank" class="github-link">
+                        <p>
+                            Version 1 implemented an Adafruit LIS3MDL 3-axis magnetometer suspended on mechanical springs over a permanent magnet, translating tilt, pan, and rotation into smooth CAD camera navigation. Version 2 refined the ergonomics with tactile analog inputs and rotary encoding.
+                        </p>
+                        <a href="https://github.com/gaetancantelobre/space_mouse" target="_blank" rel="noopener noreferrer" class="github-link">
                             <span class="icon">🔗</span> View on GitHub
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- QMK Macropad -->
             <section id="qmk-macropad" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">QMK Macropad</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">QMK Programmable Macropad</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/built_macropad.jpg" alt="Built macropad photo">
-                        <img src="images/pcb_macropad.jpg" alt="Macropad PCB photo">
-                        <img src="images/top_view.jpg" alt="Macropad top view">
-
-                        </div>
+                        <img src="images/built_macropad.jpg" alt="Fully assembled 9-key programmable macropad">
+                        <img src="images/pcb_macropad.jpg" alt="Custom fabricated macropad PCB">
+                        <img src="images/top_view.jpg" alt="Top view showing OLED status display and key switches">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            This multilayer macropad uses <strong>QMK firmware</strong> and an AutoHotKey script to easily open webpages and applications, and manage active media. Boasting a full custom PCB, it includes 9 assignable buttons and a near-limitless amount of layers to increase the number of available binds. For feedback on the current binds and layer, a **128 x 32 pixel I2C OLED screen** is situated at the top. For the brains (microcontroller), I use the classic **Arduino Pro Micro** for its high GPIO count and small footprint. The PCB was designed in KiCad and produced with **JLC PCB**.
+                            A 9-key programmable macro pad running custom <strong>QMK firmware</strong> alongside AutoHotkey scripts for rapid application switching, workspace shortcuts, and media control.
                         </p>
+                        <p>
+                            Powered by an <strong>Arduino Pro Micro</strong> (ATmega32U4), it features multiple functional layers and a dedicated <strong>128 &times; 32 I2C OLED display</strong> providing real-time layer and bind feedback. The two-layer PCB was designed in KiCad and manufactured by JLCPCB.
+                        </p>
+                        <a href="https://github.com/gaetancantelobre/rp_2040_pad" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <span class="icon">🔗</span> View on GitHub
+                        </a>
                     </div>
                 </div>
             </section>
 
+            <!-- TWIM IMPULSE AZERTY -->
             <section id="twim-impulse-azerty" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">TWIM IMPULSE - Fully Custom Keyboard from PCB to Software</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">TWIM IMPULSE - Custom AZERTY Keyboard</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/kb/kb_keys.jpg" alt="TWIM IMPULSE keyboard keys photo">
-                        <img src="images/kb/kb_pcb.jpg" alt="TWIM IMPULSE keyboard PCB photo">
-                        <img src="images/kb/kb_switches.jpg" alt="TWIM IMPULSE keyboard switches photo">
-
-                        </div>
+                        <img src="images/kb/kb_keys.jpg" alt="Custom keycap layout on TWIM IMPULSE keyboard">
+                        <img src="images/kb/kb_pcb.jpg" alt="Raw PCB highlighting matrix traces and custom silkscreen art">
+                        <img src="images/kb/kb_switches.jpg" alt="Mechanical switches installed in the PCB plate">
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            The need for this custom keyboard was **caused by an everyday constraint**: I use 60% keyboards, but all the PCBs I had built them from were designed for QWERTY layouts. This meant I was using a QWERTY physical layout with an AZERTY software layout at home, while using a classic AZERTY keyboard at university. This situation was not optimal for my workflow or typing speed. I chose to **design and build a custom AZERTY keyboard**.
+                            Born from a practical everyday need: as a French typist who uses 60% keyboards, virtually all custom PCB kits are restricted to physical QWERTY layouts. To stop juggling incompatible physical and virtual layouts between home and university, I designed a true <strong>native AZERTY 60% keyboard</strong> from schematic to firmware.
                         </p>
                         <p>
-                            More effort was put into the design and software compared to my macropad. It runs a key matrix powered by an **ATmega32U4**. I initially used QMK, but transitioned to a more hands-on approach using Arduino libraries like "TinyUSB\_Mouse\_and\_Keyboard," which allows for the simulation of HID interactions with the PC. This gives me complete control over the keyboard's functionality. The possibilities for built-in features are endless, limited only by the 32Kb of memory. This custom PCB also carries some custom art by me. The PCB was designed in KiCad and produced with **JLC PCB**.
+                            Driven by an <strong>ATmega32U4</strong> MCU, the board bypassed monolithic QMK builds in favor of lightweight, fully customized firmware utilizing <code>TinyUSB_Mouse_and_Keyboard</code>. This unlocked low-level control of HID endpoints and custom macro logic within 32 KB of flash memory. Designed in KiCad with custom silkscreen artwork and produced by JLCPCB.
                         </p>
                     </div>
                 </div>
             </section>
 
+            <!-- Simon Clone Keychain -->
             <section id="simon-keychain-rp2040" class="project-card">
                 <div class="project-header">
-                    <h2 class="project-title">Simon Clone Keychain</h2>
-                    <span class="project-tag">(Hardware)</span>
+                    <h2 class="project-title">Simon Clone Keychain (RP2040)</h2>
+                    <div class="tag-group">
+                        <span class="project-tag tag-hardware">Hardware</span>
+                    </div>
                 </div>
                 
                 <div class="project-details-3x">
-                    
                     <div class="project-showcase-3x">
-                        <img src="images/simon/whole.JPG" alt="Simon clone keychain whole photo">
-                        <img src="images/simon/assembly.gif" alt="Simon clone keychain assembly GIF">
-                        <video width="320" height="240" controls>
-                        <source src="images/simon/demo.mp4" type="video/mp4">
+                        <img src="images/simon/whole.JPG" alt="Complete 41mm Simon game keychain in hand">
+                        <img src="images/simon/assembly.gif" alt="Reflow assembly animation of the miniature keychain PCB">
+                        <video controls preload="metadata" playsinline>
+                            <source src="images/simon/demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
-                        </div>
+                    </div>
                     <div class="project-description-3x">
                         <p>
-                            A spooky clone of the classic Simon game in a **41mm keychain form factor**, running on a **RP2040** microcontroller.
+                            A fully functional clone of the classic memory game in a miniature <strong>41mm keychain form factor</strong>, powered by a Raspberry Pi <strong>RP2040</strong> microcontroller with SMD pushbuttons, piezo audio feedback, and hot-plate reflow soldering.
                         </p>
+                        <a href="https://github.com/gaetancantelobre/color_repeter" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <span class="icon">🔗</span> View on GitHub
+                        </a>
                     </div>
                 </div>
             </section>
+
+            <!-- Site Footer -->
+            <footer class="site-footer">
+                <div>&copy; Gaëtan Cantelobre &mdash; Embedded Systems Engineer</div>
+                <div>Designed &amp; built by Gaëtan Cantelobre</div>
+            </footer>
             
-            </main>
+        </main>
     </div>
 
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu-toggle');
+            const menuIcon = document.getElementById('menu-icon');
+            const sidebar = document.getElementById('sidebar');
+            const navLinks = document.querySelectorAll('.project-nav a');
+
+            // Mobile menu toggle
+            if (menuToggle && sidebar) {
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = sidebar.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                    menuIcon.textContent = isOpen ? '✕' : '☰';
+                });
+            }
+
+            // Close mobile menu when a nav link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (sidebar.classList.contains('open')) {
+                        sidebar.classList.remove('open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuIcon.textContent = '☰';
+                    }
+                });
+            });
+
+            // Highlight active link in sidebar on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </body>
 </html>

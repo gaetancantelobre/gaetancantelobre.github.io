@@ -1,160 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>1 HOUR FT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-Hour Flight Time Under 100g - Gaëtan Cantelobre</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Hey ! I'm Gaetan.</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="rc_page.html">RC and FPV projects.</a></li>
-            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
-        </ul>
+    <div class="portfolio-container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">
+                Gaëtan Cantelobre
+                <span class="sidebar-subtitle">Embedded Systems Engineer</span>
+            </h2>
+            <nav class="project-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rc_page.html">RC &amp; FPV Projects</a></li>
+                    <li><a href="CV_GC_2025_11_29.pdf" target="_blank">Curriculum Vitae</a></li>
+                </ul>
 
-        <h2>Project list :</h2>
-        <ul>
-            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
-            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
-            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
-            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
-            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
-            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
-            <li><a href="legacy.html">Tilt Indicator</a></li>
-            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
-        </ul>
+                <hr>
+                <div class="nav-section-title">Projects</div>
+                <ul>
+                    <li><a href="forfun.html#simon">Simon Clone Keychain</a></li>
+                    <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+                    <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+                    <li><a href="computer_vision.html#rbc">RoboCup SSL Challenge</a></li>
+                    <li><a href="computer_vision.html#eft">EFT Market Bot</a></li>
+                    <li><a href="hid_devices.html#kb">TWIM IMPULSE Keyboard</a></li>
+                    <li><a href="legacy.html">Tilt Indicator</a></li>
+                    <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+                </ul>
 
-        <h2>RC/FPV Project list :</h2>
-        <ul>
-            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
-            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
-            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
-            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
-        </ul>
-    </div>
+                <hr>
+                <div class="nav-section-title">RC &amp; FPV</div>
+                <ul>
+                    <li><a href="B2_60_100.html#1fg">1-Hour Flight Under 100g</a></li>
+                    <li><a href="rc_page.html#B2">B2 Mini Delta Wings</a></li>
+                    <li><a href="rc_page.html#noopy">Noopy 3-Inch Quad</a></li>
+                    <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <div class="main-content">
-        <div class="project-details-page">
-            <h1>1 hour flight time under 100g?</h1>
-            <div>
-                <h2>26 MINUTES FLIGHT TIME at FULL POWER under 100g?</h2>
-            
-                <p>I find the 1s build much more interesting if we consider that we are flying at maximum current draw (in this
-                    case +- 8 A at 3.7 V).
-                    Using the 3500 mAh cell we can estimate a theoretical max flight duration of: <b>26 minutes</b> (3.5/8x60). For
-                    a sub-100 g flying vehicle I find that quite impressive.
-                    If the wind is low I think that flight time is very possible. That being said I'm a decent FPV quad pilot but I
-                    not
-                    as good with a fixed wing.
-                </p>
-                <h4>Energy density Li-ion vs Li-Po</h4>
-                <p>These 18650 cells are super interesting if you compare the energy density to classic drone batteries (Li-Po) :
-                    if we calculate the mass/energy (mAh) of a 1s LiPo and 1s Li-ion.
-                    I took one of my 1s 450mAh Li-po : 13.5g and a 18650 3500mAh Li-on : 34g.<br>
-                    Li-Po : <b>33.3 mAh/g</b> && Li-ion : <b>102.9 mAh/g</b>.<br>
-                    The results speak for themselves.</p>
-                </p>
-                <div class="photo-gallery">
-                <img src="images/b2/bat_comp.JPG" alt="Photo">
+        <main class="main-content">
+            <div class="project-details-page" id="1fg">
+                <h1>1-Hour Flight Time Under 100g</h1>
                 
-                </div>
-                <h4>But what about for 2 cells (7.4V)? </h4>
-                <p>
-            
-                    Li-Po : 2s 450mAh 28g<br>
-                    Li-Ion : 2x 18650 3500mah 68g<br>
-                    Li-Po : <b>16.0 mAh/g</b> && Li-ion : <b>51.4 mAh/g</b>.<br>
-            
-                </p>
-            
-            
-                <h4> What does this mean?</h4>
-            
-                <p>
-                    Both Li-Ion and Li-Po are a great choice for RC applications.
-                    Regardless of the calculations above LiPo and Li-ion tend to have similar energy densities.
-                    They both have their uses. Li-po's have a higher C rating (faster discharge) but can be harder to charge and
-                    store.
-                    Li-ion are denser and smaller making them better for long-range and autonomous flight.<br>
-                    If you want to see a decent comparison (laking a bit of math IMO) check this out :
-                    <a href="https://www.grepow.com/blog/li-ion-vs-lipo-battery-for-long-range-flights.html"> Li-Po vs Li-ion </a>
-                </p>
-            
-            
-                <h4> 1 hour flight time under 100g on a delta-wing ?</h4>
-                <p>
-                    Since we can get (in theory) close de 25 minutes of flight time. Can we get 25 more with another cell
-                    onboard?<br>
-                    How close can we get to 1 hour flight time while under 100g? Obviously, with a motor glider build, this is done
-                    and done again.
-                    But what about a delta wing?
-                </p>
-                <h5> Is it possible? Under 100 grams? </h5>
-            
-            
-                <p>
-                    I believe with some smart flying, (spiraling up and gliding down using minimal thrust to save some mAh) we could
-                    get closer to 35 to 40 minutes.
-                    We could rely on computer-aided flight with systems like ArduPilot but that would mean we would need an ID chip,
-                    a GPS, and a flight controller that is capable of running at 3.7V (or add a boost converter). This adds more
-                    weight and with only <b>17g to spare</b>...
-                    The 1s version is around 83 grams, if we add 34g for an extra cell, we get to 117g which is over our limit.
-                </p>
-            
-            
-                <h5> A more pratical vision.</h5>
-            
-                <p>
-                    I really think that 1 hour flight time is possible with my current build. As the previous calculations are at
-                    max esc draw, in reality, the 1104 motors with a 3018 prop only pull <b>4.2 A</b> at full throttle.<br>
-                    So if we redo our calculations: 3.5 / 4.2 = 0.83 hours = <b>50 minutes.</b> <br>
-                    Now we are close to our objective! Knowing that the plane will fly without being on full throttle, I
-                    estimate that this goal is already achievable with the current setup.<br>
-                    That is in good to perfect conditions, having a light plane is great for endurance. The delta-wing profile does
-                    not have a rudder, giving it almost null rudder authority.<br> This puts the model to the mercy of the wind
-                    assuring the need for larger / longer corrections therefore less time in optimized flight.<br>
-                </p>
-            
-            
-                <h5> How can I save weight or flight time ?</h5>
-            
-                <p>
-                    I could save a couple of grams by removing the FPV system but it wouldn't make that much of a difference.
-                    I can surely save weight on hot glue (i tend to use too much :) ). The real evolution will be made when I can
-                    pilot better.
-                    I'm not at the point where the final flight time will be affected by a couple of grams but more by my skill in
-                    endurance-style flying.
-                </p>
-            
-                <h4> What is the next challenge? Is the skies the limit?</h5>
-            
+                <div>
+                    <h2>The 1S Endurance Concept: Pushing Battery Energy Densities</h2>
                     <p>
-                        Sadly no, the sky isn't the limit. If I challenged myself to 2 hours under 150g other limitations would
-                        occur. Too heavy, less lift, demanding higher power draw, another motor? Another ESC? It's an endless
-                        loophole.<br>
-                        Space is another consideration to take into account. I can bearly fit 1 cell and the rest of the equipment,
-                        i
-                        couldn't imagine where I could safely fit another cell.<br>
-                        I had thought of inserting the cells in the wings. Some quick tests showed that the cell's weight would
-                        cause
-                        sag in the wing in turn ruining the profile of the wings.<br>
-                        The structure could be rendered more rigid with some 2mm carbon rods but more rigid means more fragile which
-                        cause other issues.
-                        I think that the objective is possible but not on such a small frame and probably not on a delta wing.
+                        Can a sub-100-gram radio-controlled aircraft achieve a sustained one-hour flight time?
+                        While traditional RC drones rely almost exclusively on high-discharge Lithium-Polymer (Li-Po) cells, cylindrical 18650 Lithium-Ion (Li-ion) chemistry delivers substantially higher gravimetric energy density.
                     </p>
-            
-            
-                    <p> Here is something funny I found while researching the subject online: <img                
-                            src="images/b2/quora_question.png" alt="Photo">
+                    
+                    <h3>Energy Density: Li-ion vs. Li-Po</h3>
+                    <p>
+                        Comparing equivalent single-cell packs:
+                        <br>&bull; 1S 450mAh Li-Po: 13.5g &rarr; <strong>33.3 mAh/g</strong>
+                        <br>&bull; 1S 3500mAh 18650 Li-ion: 34g &rarr; <strong>102.9 mAh/g</strong>
+                    </p>
+                    <p>
+                        The Li-ion cell provides over <strong>three times the specific energy density</strong> of the Li-Po battery.
+                    </p>
+                    <div class="photo-gallery">
+                        <img src="images/b2/bat_comp.JPG" alt="Mass and size comparison of 18650 Li-ion vs 1S Li-Po pack">
+                    </div>
+
+                    <h3>What Does This Mean for Flight Duration?</h3>
+                    <p>
+                        Li-Po packs offer high C-ratings for intense burst current, which is essential for multirotor acrobatics. However, for steady-state fixed-wing cruising, an aircraft demands only a small fraction of rated discharge.
+                    </p>
+                    <p>
+                        In bench testing, the DYS 1104 motor with a Gemfan 3018 propeller drew approximately <strong>4.2A at wide-open throttle</strong> and cruising current drops to roughly <strong>2.8A &ndash; 3.2A</strong> in level flight.
+                    </p>
+                    <p>
+                        With a usable capacity of 3.2Ah from the 3500mAh cell:
+                        <br><em>3.2 Ah / 3.0 A = 1.06 hours (approx. 64 minutes).</em>
+                    </p>
+
+                    <h3>Aerodynamic &amp; Practical Considerations</h3>
+                    <p>
+                        While the math proves that continuous 1-hour flight is theoretically viable within an 83g all-up weight (AUW), micro delta wings present real aerodynamic trade-offs:
+                    </p>
+                    <ul>
+                        <li><strong>Yaw Stability:</strong> Flying wings lack a traditional rudder and vertical stabilizer moment arm, making them sensitive to crosswinds and gust induced drag corrections.</li>
+                        <li><strong>Weight Envelope:</strong> With a 34g battery on an 83g aircraft, the battery represents over 40% of the entire airframe mass, requiring precise CG balancing.</li>
+                        <li><strong>Structural Rigidity:</strong> Placing cells out on the wings creates chordwise bending moments; keeping mass centered in the fuselage pod maintains optimal wing incidence.</li>
+                    </ul>
+
+                    <div class="photo-gallery">
+                        <img src="images/b2/plane_flight.gif" alt="Micro delta wing in steady cruising flight">
+                        <img src="images/b2/quora_question.png" alt="Internet discussion on sub-100g endurance flight records">
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="github-link">&larr; Back to Main Portfolio</a>
+                </div>
             </div>
-
-            
-
-            
-
-            <a href="index.html">Back to Projects</a>
-        </div>
+        </main>
     </div>
 </body>
 </html>

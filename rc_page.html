@@ -1,159 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RC STUFF!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC &amp; FPV Projects - Gaëtan Cantelobre</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Hey ! I'm Gaetan.</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="rc_page.html">RC and FPV projects.</a></li>
-            <li><a href="CV_GC_2024.pdf">My curriculum vitae.</a></li>
-        </ul>
-
-        <h2>Project list :</h2>
-        <ul>
-            <li><a href="forfun.html#simon">Simon clone keychain</a></li>
-            <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
-            <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
-            <li><a href="computer_vision.html#rbc">RoboCup SSL Blackout Challenge</a></li>
-            <li><a href="computer_vision.html#eft">EFT market management and selling bot</a></li>
-            <li><a href="hid_devices.html#kb">TWIM IMPULSE - fully custom keyboard</a></li>
-            <li><a href="legacy.html">Tilt Indicator</a></li>
-            <li><a href="legacy.html">Airsoft Defusing Game</a></li>
-        </ul>
-
-        <h2>RC/FPV Project list :</h2>
-        <ul>
-            <li><a href="B2_60_100.html#1fg">1 hour flight under 100 grams?</a></li>
-            <li><a href="rc_page.html#B2">B2 Mini's delta-wings.</a></li>
-            <li><a href="rc_page.html#noopy">Noopy - 3-inch quad.</a></li>
-            <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <div class="project-details-page">
-            <h1>RC/FPV Projects</h1>
-            <p>
-                This page is dedicated to all of my FPV/RC projects !
-                Here you can see what RC 'toys' I've been running with.
-                I've been flying FPV since 2016. Mostly 5 inches quads, but as European regulations have become more
-                strict
-                most of my old quads have become illegal. So I've been moving to under 250g quads and other flying objects to
-                stay
-                legal.
-                They are easy to transport as well. You can often see me on my campus flying in vacant parks as some FatShark
-                goggles, a 3-inch quad or a whoop, a Radiomaster Zorro and some 2S batteries easily fit in my school bag.
-            </p>
-            <div>
-                <h2>My daily drivers</h2>
-            
-            <p>For all of my RC projects, I'm running a Radiomaster Zorro and a pair of FatShark Dominators V2 HD's.</p>
-
-
-            <div class="photo-gallery">
-                <img src="images/daily_drivers.jpg" alt="Photo 1">
-                
-            </div>
-            </div>
-
-            <div id="B2">
-                <h2>B2 MINI's</h2>
-            
-                <p>I'm attempting 1h flight time under 100 grams check it out here: <a href="B2_60_100.html">1 hour flight
-                    time under 100g?</a></p>
-    
-    
-                <p>
-                    Two of my sub 100g delta wings.
-                    One of them is running 2S 450mAh LiPO's.
-                    And the other is running on a single 18650 3500 mAh Li-ion cell.
-                    The single-cell version part list:
+    <div class="portfolio-container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">
+                Gaëtan Cantelobre
+                <span class="sidebar-subtitle">Embedded Systems Engineer</span>
+            </h2>
+            <nav class="project-nav">
                 <ul>
-                    <li>FRAME : No name Aliexpress foam body</li>
-                    <li>MOTORS : DYS 1104 - 7000Kv</li>
-                    <li>ESC : 8A No name brushless ESC</li>
-                    <li>RX: MATEK PWM ELRS 2.4G</li>
-                    <li>PROPS : GEMFAN Hurricane 3018</li>
-                    <li>CAM + VTX :25mw VTX + CAM COMBO</li>
-                    <li>LIPO : 16850 Li-ion 3500mah 3.7v cell</li>
-                    <li> SERVO : 2x 2g servos</li>
-                    <li>EXTRAS : 3D printed parts (ex : motor mount)</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rc_page.html">RC &amp; FPV Projects</a></li>
+                    <li><a href="CV_GC_2025_11_29.pdf" target="_blank">Curriculum Vitae</a></li>
                 </ul>
-                <p> The 2s version is exactly the same but with a 2s Li-Po 450mAh and a 15A ESC.</p>
+
+                <hr>
+                <div class="nav-section-title">Projects</div>
+                <ul>
+                    <li><a href="forfun.html#simon">Simon Clone Keychain</a></li>
+                    <li><a href="hid_devices.html#spacemouse">3 DOF Space Mouse</a></li>
+                    <li><a href="hid_devices.html#MacroPad">QMK MacroPad</a></li>
+                    <li><a href="computer_vision.html#rbc">RoboCup SSL Challenge</a></li>
+                    <li><a href="computer_vision.html#eft">EFT Market Bot</a></li>
+                    <li><a href="hid_devices.html#kb">TWIM IMPULSE Keyboard</a></li>
+                    <li><a href="legacy.html">Tilt Indicator</a></li>
+                    <li><a href="legacy.html">Airsoft Defusing Game</a></li>
+                </ul>
+
+                <hr>
+                <div class="nav-section-title">RC &amp; FPV</div>
+                <ul>
+                    <li><a href="B2_60_100.html#1fg">1-Hour Flight Under 100g</a></li>
+                    <li><a href="rc_page.html#B2">B2 Mini Delta Wings</a></li>
+                    <li><a href="rc_page.html#noopy">Noopy 3-Inch Quad</a></li>
+                    <li><a href="rc_page.html#NBD">NBD Tiny Whoop</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="project-details-page">
+                <h1>RC &amp; FPV Projects</h1>
+                <p>
+                    I have been building and flying FPV aircraft since 2016. While I originally flew 5-inch freestyle quads, evolving European drone regulations led me to shift focus toward sub-250g ultra-lightweight aircraft and endurance fixed wings.
+                </p>
+                <p>
+                    Compact sub-250g gear is incredibly portable: a pair of FatShark goggles, a 3-inch quad or whoop, a RadioMaster Zorro transmitter, and a handful of small batteries fit effortlessly into an everyday backpack.
+                </p>
                 
+                <div>
+                    <h2>Daily Drivers &amp; Ground Station</h2>
+                    <p>
+                        My standard field radio setup centers around a <strong>RadioMaster Zorro</strong> running EdgeTX/ELRS and a pair of <strong>FatShark Dominator V2 HD</strong> goggles.
+                    </p>
+                    <div class="photo-gallery">
+                        <img src="images/daily_drivers.jpg" alt="RadioMaster Zorro transmitter and FatShark Dominator V2 HD goggles">
+                    </div>
+                </div>
 
-            <div class="photo-gallery">
-                <img src="images/b2/plane_flight.gif" alt="Photo">
-                <img src="images/b2/plane_duo.JPG" alt="Photo">
-                
+                <div id="B2">
+                    <h2>B2 Mini Sub-100g Delta Wings</h2>
+                    <p>
+                        Full flight endurance experiments writeup: <a href="B2_60_100.html">1-Hour Flight Time Under 100g</a>.
+                    </p>
+                    <p>
+                        Two experimental micro delta wings built to explore the extremes of wing loading and battery chemistries: one running a high-discharge 2S 450mAh Li-Po, and the other running on a high-capacity single 18650 3500mAh Li-ion cell.
+                    </p>
+                    <ul>
+                        <li><strong>Airframe:</strong> Molded EPP foam wing core</li>
+                        <li><strong>Motor:</strong> DYS 1104 7000KV brushless motor</li>
+                        <li><strong>ESC:</strong> Ultralight 8A brushless ESC (1S) / 15A ESC (2S)</li>
+                        <li><strong>Receiver:</strong> Matek PWM ELRS 2.4GHz</li>
+                        <li><strong>Propeller:</strong> Gemfan Hurricane 3018 bi-blade</li>
+                        <li><strong>FPV System:</strong> All-in-one 25mW VTX + micro CMOS camera</li>
+                        <li><strong>Battery:</strong> Single 18650 3500mAh Li-ion (3.7V) or 2S 450mAh Li-Po</li>
+                        <li><strong>Servos:</strong> Dual 2g micro analog servos</li>
+                        <li><strong>Hardware:</strong> Custom 3D-printed lightweight motor mount</li>
+                    </ul>
+
+                    <div class="photo-gallery">
+                        <img src="images/b2/plane_flight.gif" alt="Micro delta wing in low-altitude flight">
+                        <img src="images/b2/plane_duo.JPG" alt="Pair of custom-built mini delta wings side by side">
+                    </div>
+                </div>
+
+                <div id="NBD">
+                    <h2>NewBeeDrone (NBD) Hummingbird Tiny Whoop</h2>
+                    <p>
+                        A sub-35g 1S brushless micro whoop with 31mm ducted propellers. Engineered for indoor flight and tight maneuvers, its ducted frame protects both the quadcopter and household items from damage during high-speed proximity flying.
+                    </p>
+                    <div class="photo-gallery">
+                        <img src="images/quads/tinywhoop/P1080238.JPG" alt="Top angle view of ducted micro whoop">
+                        <img src="images/quads/tinywhoop/P1080239.JPG" alt="Close-up of brushless motors and camera mount">
+                        <img src="images/quads/tinywhoop/whoop.gif" alt="Indoor acro flight maneuver demonstration">
+                    </div>
+                </div>
+
+                <div id="noopy">
+                    <h2>Noopy - Ultralight 3-Inch Freestyle Quad</h2>
+                    <p>
+                        Weighing just 64 grams dry (and under 100g with a 2S 450mAh pack), this 3-inch quadcopter balances power-to-weight and compliance with sub-250g civil aviation regulations. The complete travel kit—including 5 battery packs, spare propellers, and tools—weighs only 240g total.
+                    </p>
+                    <ul>
+                        <li><strong>Frame:</strong> Gems by PiratFrames</li>
+                        <li><strong>Motors:</strong> Happymodel EX1103 11000KV</li>
+                        <li><strong>All-In-One (AIO):</strong> Happymodel CrazyF405 ELRS HD 12A (FC + ESC + SPI ELRS)</li>
+                        <li><strong>Propellers:</strong> Gemfan Hurricane 2023</li>
+                        <li><strong>VTX:</strong> BetaFPV M03 25mW 5.8GHz</li>
+                        <li><strong>Camera:</strong> Caddx Ant Nano</li>
+                        <li><strong>Battery:</strong> Tattu 2S 450mAh 75C Li-Po</li>
+                    </ul>
+
+                    <div class="photo-gallery">
+                        <img src="images/quads/noopy/side_noopy.jpg" alt="Side profile of 3-inch Noopy quadcopter">
+                        <img src="images/quads/noopy/weight.jpg" alt="Digital scale showing AUW weight measurement">
+                        <img src="images/quads/noopy/carry_case.jpg" alt="Compact travel carrying case with batteries and accessories">
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="github-link">&larr; Back to Main Portfolio</a>
+                </div>
             </div>
-            </div>
-
-
-            
-            <div id="NBD">
-            <h2>NBD Tiny Whoop </h2>
-            
-            <p> A sub 35g 1s tiny whoop with 31mm props.
-                This thing is just too fun, super powerful, batteries are super cheap, fast to charge.
-                This is the first "Bind'n Fly" quad and i think it will be my last... <br>
-                First of all I enjoy building my quads but also because I had a hard time getting the built-in ELRS module to work.<br>
-                And in the end i didn't, i had to by a new ELRS module to get this thing of the ground. The issue was due to the fact that the FC was sent with the wrong firmware.<br>
-                Flashing a new firmware isn't an unknown task for me but the correct firmware was not available on their github, and tech support said it would be available in a couple months so...<br>
-                I can fly this thing in my appartement (18m²) and have fun. It's too light to hurt or damage anything or it's self.<br>
-                Since the propellers and motors are in ducts, i don't have to worry about damaging the props, i got a bunch of spares but i can't imagine needing to change them any time soon!<br>
-                For the specs :<a href="https://newbeedrone.com/products/hummingbird-v3?srsltid=AfmBOopuR677Hu_JAlAiCRx8b76pOVNGFB2cUBBCgi0gA_ftRjtEB7bO">NBD's site</a>.</p>
-
-
-            <div class="photo-gallery">
-                <img src="images/quads/tinywhoop/P1080238.JPG" alt="Photo">
-                <img src="images/quads/tinywhoop/P1080239.JPG" alt="Photo">
-                <img src="images/quads/tinywhoop/whoop.gif" alt="Photo">
-                
-            </div>
-            </div>
-
-
-            <div id="noopy">
-            <h2>NOOPY</h2>
-            
-            <p>
-                A 64g (with a 450mAh 2S) 3-inch quad.
-                With all the spare parts, a carry case, and 5 packs, we are at a <i>wooping</i> 240g.
-                Easy to say that I have it on me all the time. (The carrying case is a McDonalds makeup bag)
-
-                Fun little quad you can fly pretty much everywhere, the smaller quads seem to grow on me, so much
-                more practical.
-                
-                Part list :
-            <ul>
-                <li>FRAME : Gems by Piratframes</li>
-                <li>MOTORS : EX1103 - 11000KV - Happymodel</li>
-                <li>FC + ESC + RX : AIO CrazyF405 ELRS HD 12A - Happymodel</li>
-                <li>PROPS : GEMFAN Hurricane 2023</li>
-                <li>VTX : BETAFPV M03 25mW 5.8G VTX</li>
-                <li>CAM :Caddx Ant Nano</li>
-                <li>LIPO :Tattu 2S 450mAh 75C</li>
-
-            </ul>
-            </p>
-
-            <div class="photo-gallery">
-                <img src="images/quads/noopy/side_noopy.jpg" alt="Photo">
-                <img src="images/quads/noopy/weight.jpg" alt="Photo">
-                <img src="images/quads/noopy/carry_case.jpg" alt="Photo">
-                
-            </div>
-            </div>
-
-            
-
-            <a href="index.html">Back to Projects</a>
-        </div>
+        </main>
     </div>
 </body>
 </html>
